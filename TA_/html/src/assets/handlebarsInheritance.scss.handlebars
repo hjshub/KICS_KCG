@@ -1,0 +1,27 @@
+{{#spritesheet}}
+  @mixin icon { display: inline-block; background-image: url($sprite-url); background-repeat: no-repeat; background-size:
+  -webkit-calc({{px.width}}
+  / 2) -webkit-calc({{px.height}}
+  / 2); background-size: -moz-calc({{px.width}}
+  / 2) -moz-calc({{px.height}}
+  / 2); background-size: calc({{px.width}}
+  / 2) calc({{px.height}}
+  / 2);} .icon { @include icon;} .icon + em, .icon + b { margin-left:5px; position:relative; top:1px;}
+{{/spritesheet}}
+
+{{#sprites}}
+  @mixin icon-{{name}}{ width:-webkit-calc({{px.width}}
+  / 2); width:-moz-calc({{px.width}}
+  / 2); width:calc({{px.width}}
+  / 2); height:-webkit-calc({{px.height}}
+  / 2); height:-moz-calc({{px.height}}
+  / 2); height:calc({{px.height}}
+  / 2); background-position: -webkit-calc({{px.offset_x}}
+  / 2) -webkit-calc({{px.offset_y}}
+  / 2); background-position: -moz-calc({{px.offset_x}}
+  / 2) -moz-calc({{px.offset_y}}
+  / 2); background-position: calc({{px.offset_x}}
+  / 2) calc({{px.offset_y}}
+  / 2); } .icon-{{name}}
+  { @include icon-{{name}}; }
+{{/sprites}}

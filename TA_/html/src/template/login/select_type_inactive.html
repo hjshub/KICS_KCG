@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"로그인 유형 선택", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb2.html', { menu: false, page_title:"로그인 유형 선택", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section>
+          <div class="list selectType">
+            <div class="container">
+              <ul class="grid-wrap col-2 gap30">
+                <li>
+                  <button
+                    type="button"
+                    class="flex-wrap column edge hasIcon button-active-modal"
+                    data-modal-name="passwordLogin"
+                    disabled
+                  >
+                    <em>아이디&#47;비밀번호</em>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="flex-wrap column edge hasIcon button-active-modal"
+                    data-modal-name="certificationLogin"
+                    disabled
+                  >
+                    <em>행정전자서명 인증서</em>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="flex-wrap column edge hasIcon button-active-modal"
+                    data-modal-name="patternLogin"
+                    disabled
+                  >
+                    <em>패턴</em>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="flex-wrap column edge hasIcon button-active-modal"
+                    data-modal-name="pinNumberLogin"
+                    disabled
+                  >
+                    <em>PIN 번호</em>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- 모달 -->
+      <!-- 비밀번호 입력 -->
+      <div class="modal full animate fast" id="modal-passwordLogin">@@include('../include/modal_passwordLogin.html')</div>
+
+      <!-- 행정전자서명 인증서 비밀번호 입력 -->
+      <div class="modal full gray animate fast" id="modal-certificationLogin">
+        @@include('../include/modal_certificationLogin.html')
+      </div>
+
+      <!-- 패턴 입력 -->
+      <div class="modal full animate fast" id="modal-patternLogin">@@include('../include/modal_patternLogin.html')</div>
+
+      <!-- PIN번호 입력 -->
+      <div class="modal full animate fast" id="modal-pinNumberLogin">@@include('../include/modal_pinNumberLogin.html')</div>
+
+      <!-- 장기 미접속 -->
+      <div class="modal full animate fast" id="modal-errorMsg01">@@include('../include/modal_errorMsg01.html')</div>
+
+      <!-- 동시접속 안내 -->
+      <div class="modal full animate fast" id="modal-errorMsg02">@@include('../include/modal_errorMsg02.html')</div>
+    </div>
+  </body>
+</html>

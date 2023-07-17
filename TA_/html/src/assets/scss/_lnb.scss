@@ -1,0 +1,32 @@
+/**
+ * ==============================+
+ * lnb
+ * ==============================+
+ */
+
+#lnb {
+  position: fixed;
+  top: 0;
+  left: -25vw;
+  width: 25vw;
+  height: 100%;
+  background-color: $navy3;
+  z-index: 99;
+
+  .button-active-sideMenu {
+    width: 20px;
+    height: 70px;
+    background-color: $navy3;
+    position: absolute;
+    top: 50%;
+    right: -19px;
+    margin-top: -35px;
+    border-radius: 0 10px 10px 0;
+
+    &::before {
+      @include icon;
+      @include icon-next-wh;
+      content: '';
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@mixin display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin display-inlineFlex {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin align-content($val) {
+  -ms-flex-line-pack: $val;
+  align-content: $val;
+}
+
+@mixin align-items($val) {
+  -webkit-box-align: $val;
+  -ms-flex-align: $val;
+  align-items: $val;
+}
+
+@mixin justify-content($val) {
+  -webkit-box-pack: $val;
+  -ms-flex-pack: $val;
+  justify-content: $val;
+}
+
+@mixin box-sizing($val) {
+  box-sizing: $val;
+  -webkit-box-sizing: $val;
+  -moz-box-sizing: $val;
+}
+
+@mixin appearance($val) {
+  appearance: $val;
+  -webkit-appearance: $val;
+  -moz-appearance: $val;
+}
+
+@mixin transform($val) {
+  transform: $val;
+  -webkit-transform: $val;
+  -moz-transform: $val;
+  -ms-transform: $val;
+}
+
+@mixin transition($val) {
+  transition: $val;
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -ms-transition: $val;
+}
+
+@mixin transition-duration($val) {
+  -webkit-transition-duration: $val;
+  transition-duration: $val;
+  -moz-transition-duration: $val;
+}
+@mixin transition-delay($val) {
+  transition-delay: $val;
+  -webkit-transition-delay: $val;
+}
+
+@mixin transition-timing-function($val) {
+  -webkit-transition-timing-function: $val;
+  transition-timing-function: $val;
+  -moz-transition-timing-function: $val;
+}
+
+@mixin user-select($val) {
+  -webkit-user-select: $val;
+  -moz-user-select: $val;
+  -ms-user-select: $val;
+  user-select: $val;
+}
+
+@mixin text-size-adjust($val) {
+  -webkit-text-size-adjust: $val;
+  -moz-text-size-adjust: $val;
+  text-size-adjust: $val;
+}
+
+@mixin break-word {
+  word-break: keep-all;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+@mixin line-clamp2 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+}
+
+@mixin line-clamp3 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  white-space: normal;
+}
+
+@mixin hiddenText {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: none;
+  padding: 0;
+  margin-left: -1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin _bp($val) {
+  @media only screen and (max-width: $val) {
+    @content;
+  }
+}
+
+@mixin _min_bp($val) {
+  @media only screen and (min-width: $val) {
+    @content;
+  }
+}
+
+@mixin _bp_landscape($val) {
+  @media only screen and (orientation: landscape) and (max-width: $val) {
+    @content;
+  }
+}

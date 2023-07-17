@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"신규사용자 기기등록 완료", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb2.html', { menu: false, page_title:"신규사용자 기기등록 완료", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section class="fh">
+          <header class="heading-title-wrap2">
+            <h3 class="flex-wrap column">
+              <i class="icon icon-finish"><em class="hidden-txt">완료</em></i>
+              <em>신규 사용자 기기등록 완료</em>
+              <span>
+                간편인증 등록 및 행정전자서명 인증서를 등록하시려면<br />
+                아래 버튼을 눌러주세요.
+              </span>
+            </h3>
+          </header>
+          <div class="list selectType">
+            <div class="inner">
+              <ul class="grid-wrap gap15">
+                <li>
+                  <button type="button" class="flex-wrap edge hasIcon" onclick="location.href='../certification/manage.html'">
+                    <em>간편인증 등록</em>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="flex-wrap edge hasIcon">
+                    <em>행정전자서명 인증서</em>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <div class="inner">
+              <ol class="numeric-list">
+                <li>간편인증(패턴, PIN번호)를 등록하시면 로그인 시 등록한 간편인증 수단으로 로그인하실 수 있습니다.</li>
+                <li>
+                  원활한 업무처리를 위해 행정전자서명 인증서를 등록해주세요. (행정전자서명 인증서 등록 시 반드시 PC KICS를 실행 후
+                  진행해 주세요.)
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="btn-wrap pd-none fixed">
+            <button class="btn-apply lg bg-primary" onclick="location.href='../index2.html'">
+              <em>홈으로</em>
+            </button>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+    </div>
+  </body>
+</html>

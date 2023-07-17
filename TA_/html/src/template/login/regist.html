@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"아이디/비밀번호 등록", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb2.html', { menu: false, page_title:"아이디&#47;비밀번호 등록", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section class="fh">
+          <div class="container">
+            <header class="heading-title-wrap2">
+              <h3>로그인</h3>
+            </header>
+            <div class="form-wrap">
+              <dl class="grid-wrap gap15">
+                <dt>
+                  <label for="user_id"><em>아이디</em></label>
+                </dt>
+                <dd>
+                  <div class="text-wrap">
+                    <input type="text" id="user_id" autocomplete="off" placeholder="아이디를 입력하세요." />
+                  </div>
+                </dd>
+              </dl>
+              <dl class="grid-wrap gap15">
+                <dt>
+                  <label for="password"><em>비밀번호</em></label>
+                </dt>
+                <dd>
+                  <div class="text-wrap">
+                    <input type="text" id="password" autocomplete="off" placeholder="비밀번호를 입력하세요." />
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <p class="txt-info align-c">
+              <em> KICS 접속 아이디 및 비밀번호를 입력하여 등록을 완료 하여 주십시오. </em>
+            </p>
+          </div>
+          <div class="btn-wrap container fixed">
+            <button class="btn-search lg round_ bg-primary"><em>로그인</em></button>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+    </div>
+  </body>
+</html>

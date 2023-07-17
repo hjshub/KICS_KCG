@@ -1,0 +1,36 @@
+//variable
+:root {
+  --color-primary: #639dfa;
+  --color-sub-01: #7de5ff;
+  --color-sub-02: #fae056;
+  --color-sub-03: #ff5a5a;
+  --color-bg-01: #f5f6f8;
+  --color-bg-02: #e8f0fe;
+  --color-gray-01: #222222;
+  --color-gray-02: #666666;
+  --color-gray-03: #999999;
+}
+//theme color
+$primary: var(--color-primary);
+$sub1: var(--color-sub-01);
+$sub2: var(--color-sub-02);
+$sub3: var(--color-sub-03);
+$bg1: var(--color-bg-01);
+$bg2: var(--color-bg-02);
+$gray1: var(--color-gray-01);
+$gray2: var(--color-gray-02);
+$gray3: var(--color-gray-03);
+
+//etc color
+$black: #000;
+$white: #fff;
+$blue1: #2968ce;
+$blue2: #0074f5;
+$blue3: #3961b9;
+$blue4: #053091;
+$navy1: #01193c;
+$gray4: #333333;
+$gray5: #f5f6f8;
+
+//sprite url
+$sprite-url: '../images/img-sprite.png';

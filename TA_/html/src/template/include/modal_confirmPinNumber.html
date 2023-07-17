@@ -1,0 +1,79 @@
+<header class="modal-header">
+  <div class="inner">
+    <div class="flex-wrap end h-wrap">
+      <span class="button--close">
+        <a href="javascript:void(0)" class="button-close-modal" data-modal-name="confirmPinNumber">
+          <em class="hidden-txt">레이어팝업 닫기</em>
+          <i></i>
+          <i></i>
+        </a>
+      </span>
+      <h2>인증확인 (PIN번호)</h2>
+    </div>
+  </div>
+</header>
+<div class="modal-body">
+  <section>
+    <div class="container">
+      <header class="heading-title-wrap2">
+        <h3>
+          PIN번호 입력<br />
+          <span>등록한 PIN번호를 입력해주세요.</span>
+        </h3>
+      </header>
+      <div class="form-wrap">
+        <div class="pin-pw-wrap">
+          <label for="confirm_pin_pw"><em class="hidden-txt">PIN번호</em></label>
+          <input type="password" id="confirm_pin_pw" autocomplete="off" pattern="" maxlength="4" inputmode="numeric" />
+          <span class="grid-wrap col-4 gap20 pinNumber">
+            <em class="flex-wrap center"></em>
+            <em class="flex-wrap center"></em>
+            <em class="flex-wrap center"></em>
+            <em class="flex-wrap center"></em>
+          </span>
+        </div>
+
+        <!-- PIN번호 오류 메시지 -->
+        <p class="txt-error align-c">
+          <em class="txt-color sub3">
+            PIN번호가 일치하지 않습니다.(2&#47;5)<br />
+            5회 연속으로 오류 시 APP이 종료됩니다.
+          </em>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="btn-wrap container fixed">
+  <button class="btn-search lg round_ bg-primary button-close-modal" data-modal-name="confirmPinNumber">
+    <em>다른 인증 유형 선택</em>
+  </button>
+</div>
+
+<script>
+  const cfPinPw = document.getElementById('confirm_pin_pw');
+
+  cfPinPw.addEventListener('keydown', function (event) {
+    const exceptionKey = [' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+    exceptionKey.forEach(function (el) {
+      if (event.key == el) {
+        event.preventDefault();
+      }
+    });
+  });
+
+  cfPinPw.addEventListener('input', function (event) {
+    const child = cfPinPw.nextElementSibling.children;
+    const value = event.target.value;
+    const max = value.length;
+
+    for (let i = 0; i < child.length; i++) {
+      child[i].classList.remove('input');
+    }
+
+    for (let j = 0; j < max; j++) {
+      child[j].classList.add('input');
+    }
+  });
+</script>

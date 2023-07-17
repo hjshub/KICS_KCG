@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html', { page_main: true, theme_color:"#0074f5" })
+  </head>
+  <body>
+    <div id="layout" class="main signedIn">
+      <!-- #gnb -->
+      @@include('./include/gnb.html', {path:'.' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section class="page-top">
+          <div class="inner">
+            <div class="flex-wrap">
+              <div class="flex-wrap center symbol"><em class="hidden-txt">해양경찰</em></div>
+              <div class="flex-wrap column start edge info">
+                <em>해양경찰 형사사법정보시스템 입니다.</em>
+                <b class="txt-color sub1">고길동 경감님</b>
+                <span class="flex-wrap edge log">
+                  <em>안녕하세요!</em>
+                  <button type="button" class="btn-logout sm bg-navy trans round"><em>사용자 전환</em></button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="major-work inner">
+            <header class="heading-title-wrap">
+              <h2 class="flex-wrap">
+                <strong>주요 업무</strong>
+              </h2>
+            </header>
+            <article>
+              <div class="major-work-01 grid-wrap col-2 gap15">
+                <div>
+                  <a href="" class="flex-wrap column edge">
+                    <dl>
+                      <dt><strong>담당사건 목록</strong></dt>
+                      <dd class="txt-color primary">현재 담당중인 사건 확인</dd>
+                    </dl>
+                  </a>
+                </div>
+                <div class="flex-wrap column">
+                  <button type="button" onclick="location.href=''" disabled>
+                    <b>
+                      고래류<br />
+                      처분관리
+                    </b>
+                  </button>
+                  <button type="button" onclick="location.href=''" disabled>
+                    <b>
+                      불법 어획물<br />
+                      방류 명령
+                    </b>
+                  </button>
+                </div>
+              </div>
+              <div class="major-work-02 grid-wrap col-3 gap15">
+                <button class="flex-wrap column edge" type="button" disabled>
+                  <em>사건처리</em>
+                </button>
+                <button class="flex-wrap column edge" type="button" disabled>
+                  <em>지원</em>
+                </button>
+                <button class="flex-wrap column edge active" type="button">
+                  <em>정보검색</em>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="notice inner">
+            <header class="heading-title-wrap">
+              <h2 class="flex-wrap edge">
+                <strong>공지사항</strong>
+                <a href="" class="flex-wrap"><em>더보기</em><i class="icon icon-next"></i></a>
+              </h2>
+            </header>
+            <article>
+              <ul>
+                <li class="flex-wrap edge">
+                  <span class="caption"><em>KICS 전체</em></span>
+                  <span class="txtInfo">
+                    <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
+                  </span>
+                  <span>2024.08.12</span>
+                </li>
+                <li class="flex-wrap edge">
+                  <span class="caption"><em>기타</em></span>
+                  <span class="txtInfo">
+                    <a href="">수사결정 시스템 매뉴얼입니다.</a>
+                  </span>
+                  <span>2024.08.12</span>
+                </li>
+                <li class="flex-wrap edge">
+                  <span class="caption"><em>KICS 전체</em></span>
+                  <span class="txtInfo">
+                    <a href="">사건관리시스템은 사용방법입니다.</a>
+                  </span>
+                  <span>2024.08.12</span>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- #footer -->
+      @@include('./include/footer.html')
+      <!-- // #footer -->
+    </div>
+  </body>
+</html>

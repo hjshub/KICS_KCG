@@ -1,0 +1,718 @@
+/**
+ * ==============================+
+ * layout
+ * ==============================+
+ */
+#layout {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background-color: $white;
+
+  &.main,
+  &.gate {
+    padding-bottom: 114px;
+  }
+
+  &.main {
+    background-color: #eff2f8;
+
+    #gnb {
+      background-color: transparent;
+
+      .h-wrap {
+        height: 88px;
+      }
+    }
+
+    main {
+      padding-top: 10px;
+      background-color: transparent;
+    }
+  }
+
+  // &.menu {
+  //   #gnb {
+  //     background-color: $sub1;
+  //   }
+
+  //   main {
+  //     section {
+  //       &.top {
+  //         padding: 15px 0;
+  //         background-color: $sub1;
+
+  //         & + section {
+  //           overflow: hidden;
+  //         }
+  //       }
+
+  //       .horizonSlider {
+  //         font-size: 0;
+  //         overflow: hidden;
+  //         overflow-x: auto;
+  //         position: relative;
+  //         width: -webkit-calc(100% + 40px);
+  //         width: -moz-calc(100% + 40px);
+  //         width: calc(100% + 40px);
+  //         left: -20px;
+  //         padding: 15px 20px;
+
+  //         span {
+  //           button {
+  //             padding: 8px 13px;
+  //             background-color: $gray3;
+  //             color: $gray1;
+  //             line-height: 1;
+  //             border-radius: 7px;
+  //             font-size: 1.4rem;
+
+  //             em {
+  //               display: inline-block;
+  //               white-space: nowrap;
+  //               line-height: 1;
+  //               margin-top: 2px;
+  //             }
+
+  //             &.active {
+  //               background-color: $primary;
+  //               color: $white;
+  //             }
+  //           }
+
+  //           & + span {
+  //             margin-left: 10px;
+  //           }
+  //         }
+  //       }
+
+  //       .category {
+  //         h4 {
+  //           color: $gray3;
+  //           font-size: 1.3rem;
+  //           font-weight: 400;
+  //           line-height: 35px;
+  //         }
+  //         // 1Depth
+  //         > li {
+  //           padding: 20px 0;
+  //           position: relative;
+
+  //           & + li {
+  //             &::before {
+  //               position: absolute;
+  //               top: 0;
+  //               left: -20px;
+  //               right: -20px;
+  //               height: 1px;
+  //               background-color: $gray3;
+  //               content: '';
+  //             }
+  //           }
+  //         }
+
+  //         ._depth2 {
+  //           > li {
+  //             > a {
+  //               display: block;
+  //               line-height: 45px;
+  //               font-size: 1.6rem;
+  //               color: $gray1;
+  //               font-weight: 700;
+  //             }
+  //           }
+  //         }
+
+  //         ._depth3 {
+  //           position: relative;
+  //           width: -webkit-calc(100% + 40px);
+  //           width: -moz-calc(100% + 40px);
+  //           width: calc(100% + 40px);
+  //           margin-left: -20px;
+  //           background-color: $gray3;
+  //           padding: 20px 30px;
+
+  //           li {
+  //             line-height: 1;
+  //             padding-left: 10px;
+  //             position: relative;
+
+  //             &::before {
+  //               position: absolute;
+  //               top: 50%;
+  //               left: 0;
+  //               @include transform(translateY(-50%));
+  //               @include icon;
+  //               @include icon-dot-gray;
+  //               content: '';
+  //             }
+
+  //             & + li {
+  //               margin-top: 25px;
+  //             }
+
+  //             a {
+  //               display: block;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  // &.search {
+  //   main {
+  //     padding-bottom: 0;
+
+  //     section {
+  //       & + section {
+  //         margin-top: 20px;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+/*main*/
+main {
+  width: 100%;
+  position: relative;
+  background-color: $white;
+
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+
+  @at-root .fixed {
+    main {
+      padding-top: 88px;
+    }
+  }
+
+  @at-root section {
+    position: relative;
+
+    &.fh {
+      min-height: -webkit-calc(100vh - 70px);
+      min-height: -moz-calc(100vh - 70px);
+      min-height: calc(100vh - 70px);
+      padding-bottom: 120px;
+    }
+
+    &.bg-gray {
+      background-color: $gray3 !important;
+    }
+  }
+
+  section {
+    &.page-top {
+      .symbol {
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background-color: $white;
+
+        &::before {
+          @include icon;
+          @include icon-symbol;
+          content: '';
+        }
+      }
+
+      .info {
+        padding-left: 15px;
+
+        > em {
+          font-size: 1.8rem;
+          color: $gray2;
+        }
+
+        > b {
+          font-size: 2rem;
+          line-height: 1.3;
+        }
+      }
+
+      .log {
+        width: 100%;
+        font-size: 3rem;
+        color: $gray1;
+        line-height: 1.3;
+
+        > * {
+          vertical-align: top;
+        }
+
+        ul {
+          font-size: 0;
+
+          li {
+            display: inline-block;
+            padding: 0 12px;
+
+            &:last-of-type {
+              padding-right: 0;
+            }
+
+            a {
+              color: $primary;
+              font-size: 1.4rem;
+            }
+          }
+        }
+      }
+
+      .userInfo + div {
+        margin-top: 30px;
+      }
+
+      & + section {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  // 메인 상단
+  .top-grid-area {
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    grid-template-areas: 'log log log log log widget widget widget widget';
+    @include align-items('center');
+
+    > div {
+      &:first-of-type {
+        grid-area: log;
+      }
+      &:nth-of-type(2) {
+        grid-area: widget;
+
+        padding: 0 20px;
+        height: 50px;
+        background-color: $navy2;
+        border-radius: 30px;
+        color: $white;
+
+        > span {
+          &:first-of-type {
+            &::before {
+              @include icon;
+              @include icon-notice;
+              content: '';
+            }
+          }
+        }
+
+        .txt {
+          font-size: 1.8rem;
+          width: 100%;
+          @include ellipsis;
+        }
+
+        > * {
+          & + * {
+            padding-left: 10px;
+          }
+        }
+
+        .button-close-widget {
+          &::before {
+            @include icon;
+            @include icon-close;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  // 메인 본문
+  .main-grid-area {
+    grid-template-rows: 260px 240px;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 30px;
+    row-gap: 40px;
+    grid-template-areas:
+      'item1 item1 item1 item1 item1 item2 item2 item2 item2'
+      'item3 item3 item3 item3 item3 item4 item4 item4 item4';
+  }
+
+  .major-work-01 {
+    background-color: $blue5;
+    grid-area: item1;
+
+    a {
+      height: 100%;
+      padding: 0 50px;
+
+      &::after {
+        width: 178px;
+        height: 202px;
+        background-image: url('../images/img-major-work01.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+        content: '';
+      }
+    }
+
+    dl {
+      dt,
+      dd {
+        line-height: 1;
+        font-size: 1.5rem;
+        color: #dbecf1;
+      }
+
+      dt {
+        color: $white;
+        font-size: 2.6rem;
+      }
+
+      dd {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .major-work-02 {
+    grid-area: item2;
+
+    button {
+      width: 100%;
+      height: 120px;
+      padding: 0 30px;
+      background-color: $white;
+
+      &:focus,
+      &:active:enabled,
+      &.active {
+        background-color: $primary !important;
+        color: $white;
+
+        &::after {
+          @include icon-next-active-wh;
+        }
+      }
+
+      b {
+        font-size: 2.6rem;
+      }
+
+      &::after {
+        @include icon;
+        @include icon-next-active;
+        content: '';
+      }
+    }
+  }
+
+  .major-work-03 {
+    grid-area: item3;
+
+    > div {
+      height: 100%;
+    }
+
+    button {
+      width: 100%;
+      height: 100%;
+      padding: 40px 0;
+      background-color: $white;
+      border-radius: 20px;
+
+      &:focus,
+      &:active:enabled,
+      &.active {
+        background-color: $primary !important;
+        color: $white;
+      }
+
+      &::after {
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 100% auto;
+        content: '';
+      }
+
+      &:first-of-type {
+        &::after {
+          width: 54px;
+          height: 72px;
+          background-image: url('../images/img-major-work02.png');
+        }
+      }
+
+      &:nth-of-type(2) {
+        &::after {
+          width: 82px;
+          height: 68px;
+          background-image: url('../images/img-major-work03.png');
+        }
+      }
+
+      &:nth-of-type(3) {
+        &::after {
+          width: 80px;
+          height: 68px;
+          background-image: url('../images/img-major-work04.png');
+        }
+      }
+
+      em {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .notice {
+    grid-area: item4;
+
+    article {
+      background-color: $white;
+      padding: 20px 25px;
+      margin-top: 15px;
+
+      ul {
+        li {
+          span {
+            padding-left: 8px;
+          }
+
+          .caption {
+            padding: 7px 10px;
+            border-radius: 5px;
+            background-color: $bg2;
+            color: $blue1;
+            font-size: 0;
+
+            em {
+              display: inline-block;
+              line-height: 1;
+              white-space: nowrap;
+              font-size: 1.6rem;
+            }
+          }
+
+          .txtInfo {
+            @include ellipsis;
+            width: 100%;
+            max-width: none;
+            font-size: 1.8rem;
+
+            a {
+              vertical-align: top;
+            }
+          }
+
+          & + li {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*list*/
+.list {
+  /*user id*/
+  &.user {
+    ul {
+      padding: 30px 0;
+
+      li {
+        button {
+          width: 100%;
+          height: 60px;
+          border-radius: 10px;
+          padding: 0 15px;
+          box-shadow: 0 1px 6px 2px rgba(#08172d, 8%);
+
+          em {
+            font-size: 1.8rem;
+            font-weight: 600;
+          }
+
+          &::after {
+            @include icon;
+            @include icon-next-black;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  /*로그인, 인증 유형 선택*/
+  &.selectType {
+    ul {
+      padding: 40px 0;
+
+      li {
+        button {
+          width: 100%;
+          height: 186px;
+          border-radius: 10px;
+          border: 1px solid $primary;
+          padding: 40px 0;
+          background-color: $bg2;
+          color: $blue1;
+          box-shadow: 0 1px 6px 2px rgba(#08172d, 8%);
+
+          em {
+            font-size: 1.8rem;
+            font-weight: 600;
+          }
+
+          &::before {
+            @include icon;
+            content: '';
+          }
+        }
+
+        &:first-of-type {
+          button {
+            &::before {
+              @include icon-login-type01;
+            }
+          }
+        }
+
+        &:nth-of-type(2) {
+          button {
+            &::before {
+              @include icon-login-type02;
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          button {
+            &::before {
+              @include icon-login-type03;
+            }
+          }
+        }
+        &:nth-of-type(4) {
+          button {
+            &::before {
+              @include icon-login-type04;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*card list*/
+// .card-list {
+//   ul {
+//     li {
+//       padding: 20px 0;
+//       background-color: $white;
+
+//       .contents {
+//         grid-template-columns: 25px auto;
+//       }
+
+//       .card-view {
+//         .st-label {
+//           display: inline-block;
+//           position: absolute;
+//           top: -20px;
+//           right: 0;
+//           line-height: 25px;
+//           padding: 0 15px;
+//           border-width: 0 0 1px 1px;
+//           border-style: solid;
+//           border-color: #cccfd5;
+//           background-color: $gray3;
+//           border-bottom-left-radius: 10px;
+//           font-size: 1.3rem;
+//           font-weight: 500;
+//           color: $gray1;
+
+//           &.apply {
+//             border-color: $sub1;
+//             background-color: #e7fcff;
+//             color: $sub1;
+//           }
+//         }
+
+//         dl {
+//           dd {
+//             .count {
+//               display: inline-block;
+//               vertical-align: bottom;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+/*dropDown*/
+.dropDown {
+  display: none;
+  height: 0;
+}
+
+/*pattern*/
+.pattern-wrap {
+  max-width: 275px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 25px);
+  column-gap: 100px;
+  row-gap: 100px;
+  margin: 0 auto;
+
+  i {
+    @include display-flex;
+    @include align-items('center');
+    @include justify-content('center');
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-color: #dee1e4;
+      border-radius: 50%;
+      content: '';
+    }
+  }
+}
+
+/*swiper*/
+// .list-swiper-wrap {
+//   &.col-4 {
+//     .swiper-slide {
+//       width: 25% !important;
+//     }
+//   }
+
+//   .list-swiper {
+//     overflow: hidden;
+//   }
+
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     position: absolute;
+//     top: 50%;
+//     margin-top: -5px;
+//     z-index: 10;
+//     cursor: pointer;
+//     font-size: 0;
+//   }
+
+//   .swiper-button-prev {
+//     left: 7px;
+//   }
+
+//   .swiper-button-next {
+//     right: 7px;
+//   }
+// }

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="Author" content="간편인증 관리" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta name="theme-color" content="#fff" />
+  <!-- <meta name="format-detection" content="telephone=no"> -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+
+  <title>간편인증 관리 | 차세대 형사사법정보시스템 KICS</title>
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/vendor.js"></script>
+  <!-- <link rel="stylesheet" href="../assets/css/ui.css" /> -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+
+</head>
+
+<body>
+  <div id="layout">
+    <!-- #gnb -->
+
+    <header id="gnb">
+      <div class="inner">
+        <div class="flex-wrap edge h-wrap">
+          <span>
+            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+              <em class="hidden-txt">뒤로가기</em>
+            </a>
+          </span>
+          <h1>간편인증 관리</h1>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- // #gnb -->
+
+    <!-- #contents -->
+    <main>
+      <section>
+        <div class="description">
+          <div class="inner">
+            <ol class="numeric-list">
+              <li>신규 간편인증(패턴, PIN번호) 등록은 &lsquo;아이디&#47;비밀번호&rsquo; 인증 후 등록 가능합니다.</li>
+              <li>등록된 간편인증(패턴, PIN번호) 수정&#47;삭제는 기존에 등록한 간편인증으로 인증 후 가능합니다.</li>
+              <li>등록한 간편인증(패턴, PIN번호)이 기억나지 않을 경우 삭제(패턴삭제, PIN번호 삭제) 후 신규로 등록 해주세요.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="form-wrap">
+            <dl class="grid-wrap gap15">
+              <dt>패턴 관리</dt>
+              <dd>
+                <div class="btn-wrap grid-wrap col-3 gap8">
+                  <button class="btn-regist-pattern round__ border txt-color blue4 button-active-modal" data-modal-name="confirmPassword" disabled>
+                    <b>패턴 등록</b>
+                  </button>
+                  <button class="btn-modify-pattern round__ border txt-color blue4" disabled><b>패턴 수정</b></button>
+                  <button class="btn-delete-pattern round__ border txt-color blue4" disabled><b>패턴 삭제</b></button>
+                </div>
+              </dd>
+            </dl>
+            <dl class="grid-wrap gap15">
+              <dt>PIN번호관리</dt>
+              <dd>
+                <div class="btn-wrap grid-wrap col-3 gap8">
+                  <button class="btn-regist-pin round__ border txt-color primary button-active-modal" data-modal-name="inputPinNumber" disabled>
+                    <b>PIN번호 등록</b>
+                  </button>
+                  <button class="btn-modify-pin round__ border txt-color primary" disabled><b>PIN번호 수정</b></button>
+                  <button class="btn-delete-pin round__ border txt-color primary" disabled><b>PIN번호 삭제</b></button>
+                </div>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- // #contents -->
+
+    <!-- 모달 -->
+    <!-- 인증확인(아이디/비밀번호) -->
+    <div class="modal full animate fast" id="modal-confirmPassword">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="confirmPassword">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>인증확인(아이디&#47;비밀번호)</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                비밀번호 입력<br />
+                <span>(사용자ID : <em class="txt-color primary">USERID01</em>)</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="text-wrap">
+                <label for="pw"><em class="hidden-txt">KICS 비밀번호</em></label>
+                <input type="password" id="pw" placeholder="KICS 비밀번호를 입력하세요." autocomplete="off" />
+              </div>
+
+              <!-- 비밀번호 오류 메시지-->
+              <p class="txt-error align-c">
+                <em class="txt-color sub3">
+                  비밀번호가 일치하지 않습니다. (2&#47;5)<br />
+                  5회 연속으로 오류 시 APP이 종료됩니다.
+                </em>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 패턴 등록 -->
+    <div class="modal full animate fast" id="modal-inputPattern">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPattern">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>패턴 등록</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                패턴 입력<br />
+                <span>등록할 패턴을 입력해주세요.</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="grid-wrap pattern-wrap"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+              <!-- 패턴 등록 메시지 -->
+              <p class="txt-error align-c">
+                <em>패턴을 그려주세요.</em>
+              </p>
+
+              <!-- 패턴 입력 메시지 
+        <p class="txt-error align-c">
+          <em class="txt-color sub3">4개 이상의 점을 연결해주세요.</em>
+        </p>
+        -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 패턴 재입력 -->
+    <div class="modal full animate fast" id="modal-inputPattern2">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPattern2">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>패턴 확인</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                패턴 재입력<br />
+                <span>입력한 패턴을 한번 더 입력해 주세요.</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="grid-wrap pattern-wrap"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+              <!-- 패턴 등록 메시지 -->
+              <p class="txt-error align-c">
+                <em>패턴을 그려주세요.</em>
+              </p>
+
+              <!-- 패턴 입력 메시지 
+        <p class="txt-error align-c">
+          <em class="txt-color sub3">4개 이상의 점을 연결해주세요.</em>
+        </p>
+        -->
+
+              <!-- 패턴 재입력 오류 메시지 
+        <p class="txt-error align-c">
+          <em class="txt-color sub3">등록한 패턴과 일치하지 않습니다.</em>
+        </p>
+        -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="btn-wrap fixed">
+        <button class="btn-search lg bg-primary button-active-modal" data-modal-name="inputPattern">
+          <em>패턴 다시 입력하기</em>
+        </button>
+      </div>
+    </div>
+
+    <!-- PIN번호 등록 -->
+    <div class="modal full animate fast" id="modal-inputPinNumber">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPinNumber">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>PIN번호 등록</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                PIN번호 입력<br />
+                <span>등록할 PIN번호를 입력해 주세요.</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="pin-pw-wrap">
+                <label for="pin_pw_regist"><em class="hidden-txt">PIN번호</em></label>
+                <input type="password" id="pin_pw_regist" autocomplete="off" pattern="" maxlength="4" inputmode="numeric" />
+                <span class="grid-wrap col-4 gap15 pinNumber">
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <script>
+        const pinPwRg = document.getElementById('pin_pw_regist');
+
+        pinPwRg.addEventListener('keydown', function(event) {
+          const exceptionKey = [' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+          exceptionKey.forEach(function(el) {
+            if (event.key == el) {
+              event.preventDefault();
+            }
+          });
+        });
+
+        pinPwRg.addEventListener('input', function(event) {
+          const child = pinPwRg.nextElementSibling.children;
+          const value = event.target.value;
+          const max = value.length;
+
+          for (let i = 0; i < child.length; i++) {
+            child[i].classList.remove('input');
+          }
+
+          for (let j = 0; j < max; j++) {
+            child[j].classList.add('input');
+          }
+        });
+      </script>
+    </div>
+
+    <!-- PIN번호 재입력 -->
+    <div class="modal full animate fast" id="modal-inputPinNumber2">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="inputPinNumber2">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>PIN번호 확인</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                PIN번호 재입력<br />
+                <span>입력한 PIN번호를 한번 더 입력해 주세요.</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="pin-pw-wrap">
+                <label for="pin_pw_regist2"><em class="hidden-txt">PIN번호</em></label>
+                <input type="password" id="pin_pw_regist2" autocomplete="off" pattern="" maxlength="4" inputmode="numeric" />
+                <span class="grid-wrap col-4 gap15 pinNumber">
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                </span>
+              </div>
+
+              <!-- PIN번호 오류 메시지 -->
+              <p class="txt-error align-c">
+                <em class="txt-color sub3"> 등록한 PIN번호와 일치하지 않습니다. </em>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="btn-wrap fixed">
+        <button class="btn-search lg bg-primary button-active-modal" data-modal-name="inputPinNumber">
+          <em>PIN번호 다시 입력하기</em>
+        </button>
+      </div>
+
+      <script>
+        const pinPwRg2 = document.getElementById('pin_pw_regist2');
+
+        pinPwRg2.addEventListener('keydown', function(event) {
+          const exceptionKey = [' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+          exceptionKey.forEach(function(el) {
+            if (event.key == el) {
+              event.preventDefault();
+            }
+          });
+        });
+
+        pinPwRg2.addEventListener('input', function(event) {
+          const child = pinPwRg2.nextElementSibling.children;
+          const value = event.target.value;
+          const max = value.length;
+
+          for (let i = 0; i < child.length; i++) {
+            child[i].classList.remove('input');
+          }
+
+          for (let j = 0; j < max; j++) {
+            child[j].classList.add('input');
+          }
+        });
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

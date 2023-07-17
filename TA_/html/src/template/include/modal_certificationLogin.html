@@ -1,0 +1,58 @@
+<header class="modal-header">
+  <div class="inner">
+    <div class="flex-wrap end h-wrap">
+      <span class="button--close">
+        <a href="javascript:void(0)" class="button-close-modal" data-modal-name="certificationLogin">
+          <em class="hidden-txt">레이어팝업 닫기</em>
+          <i></i>
+          <i></i>
+        </a>
+      </span>
+      <h2>행정전자서명 비밀번호 입력</h2>
+    </div>
+  </div>
+</header>
+<div class="modal-body">
+  <section>
+    <div class="container">
+      <header class="heading-title-wrap2">
+        <h3><b>비밀번호 입력</b> <br /><span>행정전자서명 인증서 비밀번호를 입력해 주세요.</span></h3>
+      </header>
+      <div class="form-wrap">
+        <dl class="flex-wrap">
+          <dt><img src="../assets/images/sample/icon-certification.png" style="width: 21px" alt="인증서" /></dt>
+          <dd class="cert">
+            <span><b>홍**</b><b>중부지방해양경찰청</b></span>
+            <br />
+            <span>
+              <em>행정전자서명용</em><em>GPKI</em><br />
+              <em>만료일:2024.02.22 11:59:59</em>
+            </span>
+          </dd>
+        </dl>
+        <dl class="flex-wrap edge">
+          <dt>
+            <label for="certificate_pw"><em>비밀번호</em></label>
+          </dt>
+          <dd>
+            <div class="text-wrap sm gray">
+              <input type="password" class="align-c" id="certificate_pw" placeholder="비밀번호 입력" autocomplete="off" />
+            </div>
+          </dd>
+        </dl>
+        <!-- 비밀번호 오류 메시지-->
+        <p class="txt-error align-c">
+          <em class="txt-color sub3">
+            비밀번호가 일치하지 않습니다. (2&#47;5)<br />
+            5회 연속으로 오류 시 APP이 종료됩니다.
+          </em>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="btn-wrap container fixed">
+  <button class="btn-search lg round_ bg-primary button-close-modal" data-modal-name="certificationLogin">
+    <em>다른 인증 유형 선택</em>
+  </button>
+</div>

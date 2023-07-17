@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"간편인증 관리", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb2.html', { menu: false, page_title:"간편인증 관리", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section>
+          <div class="description">
+            <div class="inner">
+              <ol class="numeric-list">
+                <li>신규 간편인증(패턴, PIN번호) 등록은 &lsquo;아이디&#47;비밀번호&rsquo; 인증 후 등록 가능합니다.</li>
+                <li>등록된 간편인증(패턴, PIN번호) 수정&#47;삭제는 기존에 등록한 간편인증으로 인증 후 가능합니다.</li>
+                <li>등록한 간편인증(패턴, PIN번호)이 기억나지 않을 경우 삭제(패턴삭제, PIN번호 삭제) 후 신규로 등록 해주세요.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="inner">
+            <div class="form-wrap">
+              <dl class="grid-wrap gap15">
+                <dt>패턴 관리</dt>
+                <dd>
+                  <div class="btn-wrap grid-wrap col-3 gap8">
+                    <button
+                      class="btn-regist-pattern round__ border txt-color blue4 button-active-modal"
+                      data-modal-name="confirmPassword"
+                      disabled
+                    >
+                      <b>패턴 등록</b>
+                    </button>
+                    <button class="btn-modify-pattern round__ border txt-color blue4" disabled><b>패턴 수정</b></button>
+                    <button class="btn-delete-pattern round__ border txt-color blue4" disabled><b>패턴 삭제</b></button>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="grid-wrap gap15">
+                <dt>PIN번호관리</dt>
+                <dd>
+                  <div class="btn-wrap grid-wrap col-3 gap8">
+                    <button
+                      class="btn-regist-pin round__ border txt-color primary button-active-modal"
+                      data-modal-name="inputPinNumber"
+                      disabled
+                    >
+                      <b>PIN번호 등록</b>
+                    </button>
+                    <button class="btn-modify-pin round__ border txt-color primary" disabled><b>PIN번호 수정</b></button>
+                    <button class="btn-delete-pin round__ border txt-color primary" disabled><b>PIN번호 삭제</b></button>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- 모달 -->
+      <!-- 인증확인(아이디/비밀번호) -->
+      <div class="modal full animate fast" id="modal-confirmPassword">@@include('../include/modal_confirmPassword.html')</div>
+
+      <!-- 패턴 등록 -->
+      <div class="modal full animate fast" id="modal-inputPattern">@@include('../include/modal_inputPattern.html')</div>
+
+      <!-- 패턴 재입력 -->
+      <div class="modal full animate fast" id="modal-inputPattern2">@@include('../include/modal_inputPattern2.html')</div>
+
+      <!-- PIN번호 등록 -->
+      <div class="modal full animate fast" id="modal-inputPinNumber">@@include('../include/modal_inputPinNumber.html')</div>
+
+      <!-- PIN번호 재입력 -->
+      <div class="modal full animate fast" id="modal-inputPinNumber2">@@include('../include/modal_inputPinNumber2.html')</div>
+    </div>
+  </body>
+</html>

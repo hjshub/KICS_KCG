@@ -1,0 +1,36 @@
+@@if(menu === true){
+<header id="gnb">
+  <div class="inner">
+    <div class="flex-wrap edge h-wrap">
+      <span>
+        <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+          <em class="hidden-txt">뒤로가기</em>
+        </a>
+      </span>
+      <h1>@@page_title</h1>
+      <!-- <span class="button--allmenu">
+        <a href="" class="button-open-allMenu">
+          <em class="hidden-txt">전체메뉴</em>
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+      </span> -->
+    </div>
+  </div>
+</header>
+} @@if(menu === false){
+<header id="gnb">
+  <div class="inner">
+    <div class="flex-wrap edge h-wrap">
+      <span>
+        <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+          <em class="hidden-txt">뒤로가기</em>
+        </a>
+      </span>
+      <h1>@@page_title</h1>
+    </div>
+  </div>
+</header>
+
+}

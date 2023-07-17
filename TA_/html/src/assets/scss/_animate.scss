@@ -1,0 +1,54 @@
+/*motion*/
+.animate {
+  @include transition-duration(1s);
+  @include transition-timing-function(cubic-bezier(0.25, 0.1, 0.25, 1));
+  @include transition-delay(0s);
+  opacity: 0;
+  transition-property: opacity, transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  -moz-transition-property: opacity, -moz-transform;
+  -ms-transition-property: opacity, transform;
+
+  &.fast {
+    @include transition-duration(0.3s);
+  }
+
+  &.animation--start {
+    opacity: 1;
+    @include transform(none);
+  }
+
+  &.zoomOut {
+    @include transform(scale(0.66) translate(-50%, -50%));
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+
+  &.zoomIn {
+    opacity: 1;
+    pointer-events: auto;
+    @include transform(scale(1) translate(-50%, -50%));
+  }
+
+  &.fadeInUp {
+    @include transform(translate3d(0, 50%, 0));
+  }
+
+  &.fadeInDown {
+    @include transform(translate3d(0, -50%, 0));
+  }
+
+  &.fadeInRight {
+    @include transform(translate3d(-50%, 0, 0));
+  }
+
+  &.fadeInLeft {
+    @include transform(translate3d(50%, 0, 0));
+  }
+}
+@for $i from 1 to 10 {
+  .animate-delay-0#{$i} {
+    @include transition-delay(unquote('0.#{$i}s'));
+  }
+}

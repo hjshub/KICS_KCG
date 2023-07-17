@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"사용자ID 선택", theme_color:"#fff" })
+  </head>
+  <body>
+    <div id="layout">
+      <!-- #gnb -->
+      @@include('../include/gnb2.html', { menu: false, page_title:"사용자ID 선택", path:'..' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section class="fh">
+          <div class="form-wrap gray">
+            <div class="inner">
+              <dl class="grid-wrap gap15">
+                <dt>
+                  <label for="user_id"><em>아이디 검색</em></label>
+                </dt>
+                <dd>
+                  <div class="text-wrap wh">
+                    <input type="text" id="user_id" autocomplete="off" placeholder="아이디를 입력하세요." />
+                  </div>
+                  <div class="btn-wrap">
+                    <button class="btn-search bg-primary round_"><em>검색</em></button>
+                  </div>
+                </dd>
+            </div>
+          </div>
+          <div class="list user">
+            <div class="inner">
+              <ul class="grid-wrap gap15">
+                @@for(var i = 1; i < 5; i++){
+                <li>
+                  <button class="flex-wrap edge" type="button">
+                    <em>USERID0${i}</em>
+                  </button>
+                </li>
+                }
+              </ul>
+            </div>
+          </div>
+          <div class="description">
+            <div class="inner">
+              <ol class="numeric-list">
+                <li>이전 사용이력이 있을 경우 목록에서 사용자ID를 선택해 주세요.</li>
+                <li>
+                  이전 사용이력이 없는 경우 아래 &lsquo;신규사용자 기기등록&rsquo; 버튼을 탭 하여 사용하실 사용자ID를 등록해
+                  주세요.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="btn-wrap pd-none fixed">
+            <button class="btn-apply lg bg-primary" onclick="location.href='../login/regist2.html'">
+              <em>신규사용자 기기등록</em>
+            </button>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+    </div>
+  </body>
+</html>

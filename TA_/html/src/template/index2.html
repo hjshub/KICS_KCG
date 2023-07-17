@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('./include/head.html', { page_main: true, theme_color:"#eff2f8" })
+  </head>
+  <body>
+    <div id="layout" class="main">
+      <!-- #gnb -->
+      @@include('./include/gnb.html', {path:'.' })
+      <!-- // #gnb -->
+
+      <!-- #contents -->
+      <main>
+        <section class="page-top">
+          <div class="inner">
+            <div class="grid-wrap gap30 top-grid-area inner">
+              <div class="flex-wrap">
+                <div class="flex-wrap center symbol"><em class="hidden-txt">해양경찰</em></div>
+                <div class="flex-wrap column start edge info">
+                  <em>해양경찰 형사사법정보시스템 입니다.</em>
+                  <span class="log"><b>고길동</b> 경감님 안녕하세요!</span>
+                </div>
+              </div>
+              <!-- <div class="flex-wrap edge user-guide">
+                <span class="flex-wrap"><em class="hidden-txt">공지</em></span>
+                <span class="txt">[KICS 전체] 사건관리시스템은 사용방법입니다.</span>
+                <button type="button" class="flex-wrap button-close-widget"><em class="hidden-txt">닫기</em></button>
+              </div> -->
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="inner">
+            <div class="grid-wrap main-grid-area inner">
+              <div class="major-work-01">
+                <a href="" class="flex-wrap edge">
+                  <dl>
+                    <dt><strong>담당사건 목록</strong></dt>
+                    <dd>현재 담당중인 사건 확인</dd>
+                  </dl>
+                </a>
+              </div>
+              <div class="major-work-02 flex-wrap column edge">
+                <button class="flex-wrap edge" type="button" onclick="location.href=''" disabled>
+                  <b> 고래류 처분관리 </b>
+                </button>
+                <button class="flex-wrap edge" type="button" onclick="location.href=''" disabled>
+                  <b> 불법 어획물 방류 명령 </b>
+                </button>
+              </div>
+              <div class="major-work-03">
+                <div class="grid-wrap col-3 gap20">
+                  <button class="flex-wrap column edge" type="button" onclick="location.href=''" disabled>
+                    <em>사건처리</em>
+                  </button>
+                  <button class="flex-wrap column edge" type="button" onclick="location.href=''" disabled>
+                    <em>지원</em>
+                  </button>
+                  <button class="flex-wrap column edge active" type="button" onclick="location.href=''">
+                    <em>정보검색</em>
+                  </button>
+                </div>
+              </div>
+              <div class="notice">
+                <header class="heading-title-wrap">
+                  <h2 class="flex-wrap edge">
+                    <strong>공지사항</strong>
+                    <a href="" class="flex-wrap"><em>더보기</em><i class="icon icon-next"></i></a>
+                  </h2>
+                </header>
+                <article>
+                  <ul>
+                    <li class="flex-wrap">
+                      <span class="caption"><em>KICS 전체</em></span>
+                      <span class="txtInfo">
+                        <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
+                      </span>
+                    </li>
+                    <li class="flex-wrap">
+                      <span class="caption"><em>기타</em></span>
+                      <span class="txtInfo">
+                        <a href="">수사결정 시스템 매뉴얼입니다.</a>
+                      </span>
+                    </li>
+                    <li class="flex-wrap">
+                      <span class="caption"><em>KICS 전체</em></span>
+                      <span class="txtInfo">
+                        <a href="">사건관리시스템은 사용방법입니다.</a>
+                      </span>
+                    </li>
+                    <li class="flex-wrap">
+                      <span class="caption"><em>KICS 전체</em></span>
+                      <span class="txtInfo">
+                        <a href="">사건관리시스템은 사용방법입니다.</a>
+                      </span>
+                    </li>
+                  </ul>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- // #contents -->
+
+      <!-- #footer -->
+      @@include('./include/footer.html')
+      <!-- // #footer -->
+    </div>
+  </body>
+</html>

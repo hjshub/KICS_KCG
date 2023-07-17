@@ -1,0 +1,316 @@
+/**
+ * ==============================+
+ * reset
+ * ==============================+
+ */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+
+  &:before,
+  &:after {
+    display: inline-block;
+    @include box-sizing(border-box);
+  }
+
+  &:focus-visible {
+    outline: 1px dashed $gray3;
+    outline-offset: 1px;
+  }
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+input,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+textarea,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+main,
+nav,
+output,
+ruby,
+section,
+select,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: inherit;
+  font-style: normal;
+  vertical-align: middle;
+  // outline-width: 0;
+  @include box-sizing(border-box);
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+main,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: normal;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  max-width: 100%;
+}
+li img {
+  vertical-align: top;
+}
+
+input {
+  border-radius: 0;
+}
+
+input[type='radio'],
+input[type='checkbox'],
+input[type='date'],
+select {
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  @include appearance(none);
+}
+
+input[type='date'] {
+  &::-webkit-datetime-edit-month-field,
+  &::-webkit-datetime-edit-day-field,
+  &::-webkit-datetime-edit-year-field {
+    color: $gray3;
+  }
+  &::-webkit-clear-button,
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+  &::-webkit-calendar-picker-indicator {
+    display: inline-block;
+    opacity: 0;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    margin-right: 0;
+    background: transparent;
+  }
+}
+
+input[type='reset'],
+input[type='submit'] {
+  @include appearance(button);
+}
+
+input[type='text'] {
+  @include appearance(textfield);
+}
+
+input:-internal-autofill-previewed,
+input:-internal-autofill-selected,
+textarea:-internal-autofill-previewed,
+textarea:-internal-autofill-selected,
+select:-internal-autofill-previewed,
+select:-internal-autofill-selected {
+  background-color: rgba($black, 0) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  //outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+legend,
+caption,
+.hidden-txt {
+  @include hiddenText;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid $black;
+}
+
+/* Placeholder */
+::-webkit-input-placeholder {
+  color: rgba($gray1, 60%) !important;
+}
+:-moz-placeholder {
+  color: rgba($gray1, 60%) !important;
+}
+::-moz-placeholder {
+  color: rgba($gray1, 60%) !important;
+}
+:-ms-input-placeholder {
+  color: rgba($gray1, 60%) !important;
+}
+::-ms-input-placeholder {
+  color: rgba($gray1, 60%) !important;
+}
+::placeholder {
+  color: rgba($gray1, 60%) !important;
+}
+.placeholderTxt {
+  color: rgba($gray1, 60%) !important;
+}
+
+/* Selection */
+::-moz-selection {
+  text-shadow: none;
+  background: #ddd;
+}
+::selection {
+  text-shadow: none;
+  background: #ddd;
+}
+::-webkit-scrollbar {
+  display: none;
+  width: 4px;
+  height: 4px;
+}
+// ::-webkit-scrollbar-button:start:decrement,
+// ::-webkit-scrollbar-button:end:increment {
+//   display: none;
+//   height: 10px;
+//   background: #222222;
+// }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  height: 4px;
+  width: 4px;
+  background: #4d4d4d;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0);
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('../include/head.html', { page_main: false, page_title:"파일 목록", theme_color:"#fff" })
+
+    <style>
+      main {
+        margin: 0 auto;
+        padding: 5rem 1rem;
+        color: #000;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 600;
+      }
+      [class^='tableStyle'] {
+        width: 100%;
+        margin-top: 30px;
+        font-size: 1.4rem;
+        overflow: hidden;
+        overflow-x: auto;
+      }
+      [class^='tableStyle'] table {
+        min-width: 821px;
+        width: 100%;
+        text-align: center;
+        table-layout: fixed;
+      }
+      [class^='tableStyle'] table th,
+      [class^='tableStyle'] table td {
+        border-style: solid;
+        border-color: #5dacf1;
+        line-height: 1.7;
+        padding: 8px 1.5rem;
+        white-space: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+      [class^='tableStyle'] table td {
+        text-align: left;
+      }
+      [class^='tableStyle'] table th {
+        border-width: 3px 0 1px 0px;
+      }
+      [class^='tableStyle'] table td {
+        border-width: 1px 0 0 1px;
+      }
+      [class^='tableStyle'] table td:first-of-type {
+        border-left: none;
+        text-align: center;
+      }
+      [class^='tableStyle'] table tr:first-of-type td {
+        border-top: none;
+      }
+      .finish {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>File Index</h1>
+      </header>
+      <div class="contents">
+        <div class="tableStyle">
+          <table>
+            <caption>
+              목록
+            </caption>
+            <colgroup>
+              <col style="width: 6%" />
+              <col style="width: 12%" />
+              <col style="width: 15%" />
+              <col style="width: 12%" />
+              <col style="width: auto" />
+              <col style="width: 10%" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th class="align-l" colspan="3" scope="col">구분</th>
+                <th scope="col">경로</th>
+                <th scope="col">진행 현황</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="2">메인</td>
+                <td colspan="2">로그인 전</td>
+                <td><a href="../index.html" target="_blank">index.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td colspan="2">로그인 후</td>
+                <td><a href="../index2.html" target="_blank">index2.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="13">인증관리</td>
+                <td rowspan="7">간편인증관리</td>
+                <td>활성화</td>
+                <td><a href="../certification/manage.html" target="_blank">certification/manage.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>비활성화</td>
+                <td><a href="../certification/manage_inactive.html" target="_blank">certification/manage_inactive.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>인증확인 - 아이디&#47;비밀번호<br />(레이어 팝업)</td>
+                <td>
+                  <a href="../certification/manage.html#confirmPassword" target="_blank">
+                    certification/manage.html#confirmPassword
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>패턴등록<br />(레이어팝업)</td>
+                <td>
+                  <a href="../certification/manage.html#inputPattern" target="_blank">certification/manage.html#inputPattern </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>패턴 재입력<br />(레이어팝업)</td>
+                <td>
+                  <a href="../certification/manage.html#inputPattern2" target="_blank">
+                    certification/manage.html#inputPattern2
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>PIN번호 등록<br />(레이어팝업)</td>
+                <td>
+                  <a href="../certification/manage.html#inputPinNumber" target="_blank">
+                    certification/manage.html#inputPinNumber
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>PIN번호 재입력<br />(레이어팝업)</td>
+                <td>
+                  <a href="../certification/manage.html#inputPinNumber2" target="_blank">
+                    certification/manage.html#inputPinNumber2
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="6">인증 유형 선택</td>
+                <td>활성화</td>
+                <td>
+                  <a href="../certification/select_type.html" target="_blank">certification/select_type.html </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>비활성화</td>
+                <td>
+                  <a href="../certification/select_type_inactive.html" target="_blank">certification/select_type_inactive.html</a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>인증확인 - 아이디&#47;비밀번호<br />(레이어 팝업)</td>
+                <td>
+                  <a href="../certification/select_type.html#confirmPassword" target="_blank">
+                    certification/select_type.html#confirmPassword
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>인증확인 - 행정전자서명 인증서<br />(레이어 팝업)</td>
+                <td>
+                  <a href="../certification/select_type.html#confirmCertification" target="_blank">
+                    login/select_type.html#confirmCertification
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>인증확인(패턴)<br />(레이어팝업)</td>
+                <td>
+                  <a href="../certification/select_type.html#confirmPattern" target="_blank"
+                    >certification/select_type.html#confirmPattern
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>인증확인 - PIN번호<br />(레이어팝업)</td>
+                <td>
+                  <a href="../certification/select_type.html#confirmPinNumber" target="_blank">
+                    certification/select_type.html#confirmPinNumber
+                  </a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="11">로그인</td>
+                <td colspan="2">사용자 아이디 선택</td>
+                <td><a href="../login/user_id.html" target="_blank">login/user_id.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td rowspan="8">로그인 유형 선택</td>
+                <td>활성화</td>
+                <td><a href="../login/select_type.html" target="_blank">login/select_type.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>비활성화</td>
+                <td><a href="../login/select_type_inactive.html" target="_blank">login/select_type_inactive.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>아이디&#47;비밀번호<br />(레이어 팝업)</td>
+                <td>
+                  <a href="../login/select_type.html#passwordLogin" target="_blank">login/select_type.html#passwordLogin</a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>행정전자서명 인증서<br />(레이어 팝업)</td>
+                <td>
+                  <a href="../login/select_type.html#certificationLogin" target="_blank"
+                    >login/select_type.html#certificationLogin</a
+                  >
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>패턴<br />(레이어 팝업)</td>
+                <td><a href="../login/select_type.html#patternLogin" target="_blank">login/select_type.html#patternLogin</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>PIN번호<br />(레이어 팝업)</td>
+                <td>
+                  <a href="../login/select_type.html#pinNumberLogin" target="_blank">login/select_type.html#pinNumberLogin</a>
+                </td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>장기 미접속<br />(레이어 팝업)</td>
+                <td><a href="../login/select_type.html#errorMsg01" target="_blank">login/select_type.html#errorMsg01</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td>동시접속<br />(레이어 팝업)</td>
+                <td><a href="../login/select_type.html#errorMsg02" target="_blank">login/select_type.html#errorMsg02</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td colspan="2">아이디&#47;비밀번호 등록</td>
+                <td><a href="../login/regist.html" target="_blank">login/regist.html</a></td>
+                <td>완료</td>
+              </tr>
+              <tr>
+                <td class="count"></td>
+                <td colspan="2">신규사용자 기기등록 완료</td>
+                <td><a href="../login/regist2.html" target="_blank">login/regist2.html</a></td>
+                <td>완료</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const counts = document.querySelectorAll('.count');
+
+      counts.forEach((el, idx) => {
+        el.innerHTML = idx + 1;
+        //console.log(el, idx);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+@@if(menu === true){
+<header id="gnb">
+  <div class="menu">
+    <div class="flex-wrap edge inner h-wrap">
+      <div class="flex-wrap major">
+        <span>
+          <a href="" class="icon icon-logo"><em class="hidden-txt">해양경찰</em></a>
+        </span>
+        <ul class="flex-wrap">
+          <li><a href="">사건수사</a></li>
+          <li><a href="">증거자료수집</a></li>
+          <li><a href="">영장관리</a></li>
+        </ul>
+      </div>
+      <div class="flex-wrap subs">
+        <span class="flex-wrap search-wrap">
+          <input type="text" placeholder="검색어를 입력해주세요." />
+          <button type="button">
+            <i class="icon icon-search"> <em class="hidden-txt">검색</em></i>
+          </button>
+        </span>
+        <ul class="flex-wrap">
+          <li>
+            <a href="" class="bookmark"><em>즐겨찾기</em></a>
+          </li>
+          <li>
+            <a href="" class="user button--arrow button-active-dropDown"><b>김일남</b>님</a>
+            <div class="dropDown">
+              <ul>
+                <li><a href="">USERID01</a></li>
+                <li><a href="">USERID02</a></li>
+                <li><a href="">USERID03</a></li>
+                <li><a href="">USERID04</a></li>
+                <li><a href="">USERID05</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <span class="button--allmenu">
+          <a href="" class="button-open-allMenu">
+            <em class="hidden-txt">전체메뉴</em>
+            <i></i>
+            <i></i>
+            <i></i>
+          </a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <nav class="page-nav">
+    <div class="flex-wrap edge inner h-wrap">
+      <span>
+        <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+          <em class="hidden-txt">뒤로가기</em>
+        </a>
+      </span>
+      <h1>@@page_title</h1>
+    </div>
+  </nav>
+</header>
+} @@if(menu === false){
+<header id="gnb">
+  <nav class="page-nav">
+    <div class="flex-wrap edge inner h-wrap">
+      <span>
+        <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+          <em class="hidden-txt">뒤로가기</em>
+        </a>
+      </span>
+      <h1>@@page_title</h1>
+    </div>
+  </nav>
+</header>
+
+}

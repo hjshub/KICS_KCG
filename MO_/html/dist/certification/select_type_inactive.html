@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="Author" content="인증 유형 선택" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta name="theme-color" content="#fff" />
+  <!-- <meta name="format-detection" content="telephone=no"> -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+
+  <title>인증 유형 선택 | 차세대 형사사법정보시스템 KICS</title>
+  <script defer src="../assets/js/main.js"></script>
+  <script defer src="../assets/js/vendor.js"></script>
+  <!-- <link rel="stylesheet" href="../assets/css/ui.css" /> -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+
+</head>
+
+<body>
+  <div id="layout">
+    <!-- #gnb -->
+
+    <header id="gnb">
+      <div class="inner">
+        <div class="flex-wrap edge h-wrap">
+          <span>
+            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+              <em class="hidden-txt">뒤로가기</em>
+            </a>
+          </span>
+          <h1>인증 유형 선택</h1>
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- // #gnb -->
+
+    <!-- #contents -->
+    <main>
+      <section>
+        <div class="list selectType">
+          <div class="inner">
+            <ul class="grid-wrap gap15">
+              <li>
+                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPassword" disabled>
+                  <em>아이디&#47;비밀번호</em>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmCertification" disabled>
+                  <em>행정전자서명 인증서</em>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPattern" disabled>
+                  <em>패턴</em>
+                </button>
+              </li>
+              <li>
+                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPinNumber" disabled>
+                  <em>PIN 번호</em>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- // #contents -->
+
+    <!-- 모달 -->
+    <!-- 비밀번호 입력 -->
+    <div class="modal full animate fast" id="modal-confirmPassword">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="confirmPassword">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>인증확인(아이디&#47;비밀번호)</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                비밀번호 입력<br />
+                <span>(사용자ID : <em class="txt-color primary">USERID01</em>)</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="text-wrap">
+                <label for="pw"><em class="hidden-txt">KICS 비밀번호</em></label>
+                <input type="password" id="pw" placeholder="KICS 비밀번호를 입력하세요." autocomplete="off" />
+              </div>
+
+              <!-- 비밀번호 오류 메시지-->
+              <p class="txt-error align-c">
+                <em class="txt-color sub3">
+                  비밀번호가 일치하지 않습니다. (2&#47;5)<br />
+                  5회 연속으로 오류 시 APP이 종료됩니다.
+                </em>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- 행정전자서명 인증서 비밀번호 입력 -->
+    <div class="modal full gray animate fast" id="modal-confirmCertification">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="confirmCertification">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>인증확인 (행정전자서명 인증서)</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3><b>비밀번호 입력</b> <br /><span>행정전자서명 인증서 비밀번호를 입력해 주세요.</span></h3>
+            </header>
+          </div>
+          <div class="form-wrap">
+            <dl class="flex-wrap">
+              <dt><img src="../assets/images/sample/icon-certification.png" style="width: 21px" alt="인증서" /></dt>
+              <dd class="cert">
+                <span><b>홍**</b><b>중부지방해양경찰청</b></span>
+                <br />
+                <span>
+                  <em>행정전자서명용</em><em>GPKI</em><br />
+                  <em>만료일:2024.02.22 11:59:59</em>
+                </span>
+              </dd>
+            </dl>
+            <dl class="flex-wrap edge">
+              <dt>
+                <label for="certificate_pw"><em>비밀번호</em></label>
+              </dt>
+              <dd>
+                <div class="text-wrap sm">
+                  <input type="password" class="align-c" id="certificate_pw" placeholder="비밀번호 입력" autocomplete="off" />
+                </div>
+              </dd>
+            </dl>
+            <!-- 비밀번호 오류 메시지-->
+            <p class="txt-error align-c">
+              <em class="txt-color sub3">
+                비밀번호가 일치하지 않습니다. (2&#47;5)<br />
+                5회 연속으로 오류 시 APP이 종료됩니다.
+              </em>
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="btn-wrap fixed">
+        <button class="btn-search lg bg-primary button-close-modal" data-modal-name="confirmCertification">
+          <em>다른 인증 유형 선택</em>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- 패턴 입력 -->
+    <div class="modal full animate fast" id="modal-confirmPattern">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="confirmPattern">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>인증확인 (패턴)</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                패턴 입력<br />
+                <span>현재 등록된 패턴을 입력해주세요.</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="grid-wrap pattern-wrap"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+              <!-- 패턴 등록 메시지 -->
+              <p class="txt-error align-c">
+                <em>패턴을 그려주세요.</em>
+              </p>
+
+              <!-- 패턴 입력 메시지 
+        <p class="txt-error align-c">
+          <em class="txt-color sub3">4개 이상의 점을 연결해주세요.</em>
+        </p>
+        -->
+
+              <!-- 패턴 오류 메시지 
+       <p class="txt-error align-c">
+        <em class="txt-color sub3">
+          패턴이 일치하지 않습니다. (2&#47;5)<br />
+          5회 연속으로 오류 시 APP이 종료됩니다.
+        </em>
+      </p>
+        -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="btn-wrap fixed">
+        <button class="btn-search lg bg-primary button-close-modal" data-modal-name="confirmPattern">
+          <em>다른 인증 유형 선택</em>
+        </button>
+      </div>
+    </div>
+
+    <!-- PIN번호 입력 -->
+    <div class="modal full animate fast" id="modal-confirmPinNumber">
+      <header class="modal-header">
+        <div class="inner">
+          <div class="flex-wrap end h-wrap">
+            <span class="button--close">
+              <a href="javascript:void(0)" class="button-close-modal" data-modal-name="confirmPinNumber">
+                <em class="hidden-txt">레이어팝업 닫기</em>
+                <i></i>
+                <i></i>
+              </a>
+            </span>
+            <h2>인증확인 (PIN번호)</h2>
+          </div>
+        </div>
+      </header>
+      <div class="modal-body">
+        <section>
+          <div class="inner">
+            <header class="heading-title-wrap2">
+              <h3>
+                PIN번호 입력<br />
+                <span>등록한 PIN번호를 입력해주세요.</span>
+              </h3>
+            </header>
+            <div class="form-wrap">
+              <div class="pin-pw-wrap">
+                <label for="confirm_pin_pw"><em class="hidden-txt">PIN번호</em></label>
+                <input type="password" id="confirm_pin_pw" autocomplete="off" pattern="" maxlength="4" inputmode="numeric" />
+                <span class="grid-wrap col-4 gap15 pinNumber">
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                  <em class="flex-wrap center"></em>
+                </span>
+              </div>
+
+              <!-- PIN번호 오류 메시지 -->
+              <p class="txt-error align-c">
+                <em class="txt-color sub3">
+                  PIN번호가 일치하지 않습니다.(2&#47;5)<br />
+                  5회 연속으로 오류 시 APP이 종료됩니다.
+                </em>
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="btn-wrap fixed">
+        <button class="btn-search lg bg-primary button-close-modal" data-modal-name="confirmPinNumber">
+          <em>다른 인증 유형 선택</em>
+        </button>
+      </div>
+
+      <script>
+        const cfPinPw = document.getElementById('confirm_pin_pw');
+
+        cfPinPw.addEventListener('keydown', function(event) {
+          const exceptionKey = [' ', 'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'];
+
+          exceptionKey.forEach(function(el) {
+            if (event.key == el) {
+              event.preventDefault();
+            }
+          });
+        });
+
+        cfPinPw.addEventListener('input', function(event) {
+          const child = cfPinPw.nextElementSibling.children;
+          const value = event.target.value;
+          const max = value.length;
+
+          for (let i = 0; i < child.length; i++) {
+            child[i].classList.remove('input');
+          }
+
+          for (let j = 0; j < max; j++) {
+            child[j].classList.add('input');
+          }
+        });
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

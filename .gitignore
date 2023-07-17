@@ -1,0 +1,15 @@
+
+# 배포용 파일 제외
+# dist/
+
+# node_modules 제외
+node_modules/
+
+#백업 파일 제외
+*.bak
+
+#라이센스 파일 제외
+*.LICENSE.txt
+
+#태블릿
+#TA_/

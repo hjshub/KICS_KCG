@@ -1,471 +1,169 @@
-  @mixin icon { display: inline-block; background-image: url($sprite-url); background-repeat: no-repeat; background-size:
-  -webkit-calc(370px
-  / 2) -webkit-calc(334px
-  / 2); background-size: -moz-calc(370px
-  / 2) -moz-calc(334px
-  / 2); background-size: calc(370px
-  / 2) calc(334px
-  / 2);} .icon { @include icon;} .icon + em, .icon + b { margin-left:5px; position:relative; top:1px;}
+  @mixin icon { display: inline-block; background-image: url($sprite-url); background-repeat: no-repeat; background-size: calc(370px/
+  2) calc(334px
+  / 2); } .icon {@include icon;}
 
-  @mixin icon-back{ width:-webkit-calc(20px
-  / 2); width:-moz-calc(20px
-  / 2); width:calc(20px
-  / 2); height:-webkit-calc(34px
-  / 2); height:-moz-calc(34px
+  @mixin icon-back{ width:calc(20px
   / 2); height:calc(34px
-  / 2); background-position: -webkit-calc(-198px
-  / 2) -webkit-calc(-45px
-  / 2); background-position: -moz-calc(-198px
-  / 2) -moz-calc(-45px
   / 2); background-position: calc(-198px
   / 2) calc(-45px
-  / 2); } .icon-back
-  { @include icon-back; }
-  @mixin icon-calendar{ width:-webkit-calc(32px
-  / 2); width:-moz-calc(32px
-  / 2); width:calc(32px
-  / 2); height:-webkit-calc(28px
-  / 2); height:-moz-calc(28px
+  / 2); } .icon-back{@include icon-back;}
+  @mixin icon-calendar{ width:calc(32px
   / 2); height:calc(28px
-  / 2); background-position: -webkit-calc(-82px
-  / 2) -webkit-calc(-296px
-  / 2); background-position: -moz-calc(-82px
-  / 2) -moz-calc(-296px
   / 2); background-position: calc(-82px
   / 2) calc(-296px
-  / 2); } .icon-calendar
-  { @include icon-calendar; }
-  @mixin icon-caution{ width:-webkit-calc(80px
-  / 2); width:-moz-calc(80px
-  / 2); width:calc(80px
-  / 2); height:-webkit-calc(80px
-  / 2); height:-moz-calc(80px
+  / 2); } .icon-calendar{@include icon-calendar;}
+  @mixin icon-caution{ width:calc(80px
   / 2); height:calc(80px
-  / 2); background-position: -webkit-calc(0px
-  / 2) -webkit-calc(-142px
-  / 2); background-position: -moz-calc(0px
-  / 2) -moz-calc(-142px
   / 2); background-position: calc(0px
   / 2) calc(-142px
-  / 2); } .icon-caution
-  { @include icon-caution; }
-  @mixin icon-certification-active{ width:-webkit-calc(38px
-  / 2); width:-moz-calc(38px
-  / 2); width:calc(38px
-  / 2); height:-webkit-calc(36px
-  / 2); height:-moz-calc(36px
+  / 2); } .icon-caution{@include icon-caution;}
+  @mixin icon-certification-active{ width:calc(38px
   / 2); height:calc(36px
-  / 2); background-position: -webkit-calc(-157px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(-157px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(-157px
   / 2) calc(-227px
-  / 2); } .icon-certification-active
-  { @include icon-certification-active; }
-  @mixin icon-certification{ width:-webkit-calc(38px
-  / 2); width:-moz-calc(38px
-  / 2); width:calc(38px
-  / 2); height:-webkit-calc(36px
-  / 2); height:-moz-calc(36px
+  / 2); } .icon-certification-active{@include icon-certification-active;}
+  @mixin icon-certification{ width:calc(38px
   / 2); height:calc(36px
-  / 2); background-position: -webkit-calc(-200px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(-200px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(-200px
   / 2) calc(-227px
-  / 2); } .icon-certification
-  { @include icon-certification; }
-  @mixin icon-checked{ width:-webkit-calc(22px
-  / 2); width:-moz-calc(22px
-  / 2); width:calc(22px
-  / 2); height:-webkit-calc(18px
-  / 2); height:-moz-calc(18px
+  / 2); } .icon-certification{@include icon-certification;}
+  @mixin icon-checked{ width:calc(22px
   / 2); height:calc(18px
-  / 2); background-position: -webkit-calc(-198px
-  / 2) -webkit-calc(-84px
-  / 2); background-position: -moz-calc(-198px
-  / 2) -moz-calc(-84px
   / 2); background-position: calc(-198px
   / 2) calc(-84px
-  / 2); } .icon-checked
-  { @include icon-checked; }
-  @mixin icon-close{ width:-webkit-calc(28px
-  / 2); width:-moz-calc(28px
-  / 2); width:calc(28px
-  / 2); height:-webkit-calc(28px
-  / 2); height:-moz-calc(28px
+  / 2); } .icon-checked{@include icon-checked;}
+  @mixin icon-close{ width:calc(28px
   / 2); height:calc(28px
-  / 2); background-position: -webkit-calc(-119px
-  / 2) -webkit-calc(-296px
-  / 2); background-position: -moz-calc(-119px
-  / 2) -moz-calc(-296px
   / 2); background-position: calc(-119px
   / 2) calc(-296px
-  / 2); } .icon-close
-  { @include icon-close; }
-  @mixin icon-dot-gray{ width:-webkit-calc(8px
-  / 2); width:-moz-calc(8px
-  / 2); width:calc(8px
-  / 2); height:-webkit-calc(8px
-  / 2); height:-moz-calc(8px
+  / 2); } .icon-close{@include icon-close;}
+  @mixin icon-dot-gray{ width:calc(8px
   / 2); height:calc(8px
-  / 2); background-position: -webkit-calc(-280px
-  / 2) -webkit-calc(-191px
-  / 2); background-position: -moz-calc(-280px
-  / 2) -moz-calc(-191px
   / 2); background-position: calc(-280px
   / 2) calc(-191px
-  / 2); } .icon-dot-gray
-  { @include icon-dot-gray; }
-  @mixin icon-dot{ width:-webkit-calc(8px
-  / 2); width:-moz-calc(8px
-  / 2); width:calc(8px
-  / 2); height:-webkit-calc(8px
-  / 2); height:-moz-calc(8px
+  / 2); } .icon-dot-gray{@include icon-dot-gray;}
+  @mixin icon-dot{ width:calc(8px
   / 2); height:calc(8px
-  / 2); background-position: -webkit-calc(-227px
-  / 2) -webkit-calc(-207px
-  / 2); background-position: -moz-calc(-227px
-  / 2) -moz-calc(-207px
   / 2); background-position: calc(-227px
   / 2) calc(-207px
-  / 2); } .icon-dot
-  { @include icon-dot; }
-  @mixin icon-finish{ width:-webkit-calc(80px
-  / 2); width:-moz-calc(80px
-  / 2); width:calc(80px
-  / 2); height:-webkit-calc(80px
-  / 2); height:-moz-calc(80px
+  / 2); } .icon-dot{@include icon-dot;}
+  @mixin icon-finish{ width:calc(80px
   / 2); height:calc(80px
-  / 2); background-position: -webkit-calc(-85px
-  / 2) -webkit-calc(-142px
-  / 2); background-position: -moz-calc(-85px
-  / 2) -moz-calc(-142px
   / 2); background-position: calc(-85px
   / 2) calc(-142px
-  / 2); } .icon-finish
-  { @include icon-finish; }
-  @mixin icon-home-active{ width:-webkit-calc(36px
-  / 2); width:-moz-calc(36px
-  / 2); width:calc(36px
-  / 2); height:-webkit-calc(40px
-  / 2); height:-moz-calc(40px
+  / 2); } .icon-finish{@include icon-finish;}
+  @mixin icon-home-active{ width:calc(36px
   / 2); height:calc(40px
-  / 2); background-position: -webkit-calc(-75px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(-75px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(-75px
   / 2) calc(-227px
-  / 2); } .icon-home-active
-  { @include icon-home-active; }
-  @mixin icon-home{ width:-webkit-calc(36px
-  / 2); width:-moz-calc(36px
-  / 2); width:calc(36px
-  / 2); height:-webkit-calc(40px
-  / 2); height:-moz-calc(40px
+  / 2); } .icon-home-active{@include icon-home-active;}
+  @mixin icon-home{ width:calc(36px
   / 2); height:calc(40px
-  / 2); background-position: -webkit-calc(-116px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(-116px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(-116px
   / 2) calc(-227px
-  / 2); } .icon-home
-  { @include icon-home; }
-  @mixin icon-login-type01{ width:-webkit-calc(58px
-  / 2); width:-moz-calc(58px
-  / 2); width:calc(58px
-  / 2); height:-webkit-calc(64px
-  / 2); height:-moz-calc(64px
+  / 2); } .icon-home{@include icon-home;}
+  @mixin icon-login-type01{ width:calc(58px
   / 2); height:calc(64px
-  / 2); background-position: -webkit-calc(-304px
-  / 2) -webkit-calc(-140px
-  / 2); background-position: -moz-calc(-304px
-  / 2) -moz-calc(-140px
   / 2); background-position: calc(-304px
   / 2) calc(-140px
-  / 2); } .icon-login-type01
-  { @include icon-login-type01; }
-  @mixin icon-login-type02{ width:-webkit-calc(60px
-  / 2); width:-moz-calc(60px
-  / 2); width:calc(60px
-  / 2); height:-webkit-calc(64px
-  / 2); height:-moz-calc(64px
+  / 2); } .icon-login-type01{@include icon-login-type01;}
+  @mixin icon-login-type02{ width:calc(60px
   / 2); height:calc(64px
-  / 2); background-position: -webkit-calc(-304px
-  / 2) -webkit-calc(-71px
-  / 2); background-position: -moz-calc(-304px
-  / 2) -moz-calc(-71px
   / 2); background-position: calc(-304px
   / 2) calc(-71px
-  / 2); } .icon-login-type02
-  { @include icon-login-type02; }
-  @mixin icon-login-type03{ width:-webkit-calc(66px
-  / 2); width:-moz-calc(66px
-  / 2); width:calc(66px
-  / 2); height:-webkit-calc(66px
-  / 2); height:-moz-calc(66px
+  / 2); } .icon-login-type02{@include icon-login-type02;}
+  @mixin icon-login-type03{ width:calc(66px
   / 2); height:calc(66px
-  / 2); background-position: -webkit-calc(-304px
-  / 2) -webkit-calc(0px
-  / 2); background-position: -moz-calc(-304px
-  / 2) -moz-calc(0px
   / 2); background-position: calc(-304px
   / 2) calc(0px
-  / 2); } .icon-login-type03
-  { @include icon-login-type03; }
-  @mixin icon-login-type04{ width:-webkit-calc(66px
-  / 2); width:-moz-calc(66px
-  / 2); width:calc(66px
-  / 2); height:-webkit-calc(42px
-  / 2); height:-moz-calc(42px
+  / 2); } .icon-login-type03{@include icon-login-type03;}
+  @mixin icon-login-type04{ width:calc(66px
   / 2); height:calc(42px
-  / 2); background-position: -webkit-calc(-304px
-  / 2) -webkit-calc(-209px
-  / 2); background-position: -moz-calc(-304px
-  / 2) -moz-calc(-209px
   / 2); background-position: calc(-304px
   / 2) calc(-209px
-  / 2); } .icon-login-type04
-  { @include icon-login-type04; }
-  @mixin icon-logo{ width:-webkit-calc(222px
-  / 2); width:-moz-calc(222px
-  / 2); width:calc(222px
-  / 2); height:-webkit-calc(40px
-  / 2); height:-moz-calc(40px
+  / 2); } .icon-login-type04{@include icon-login-type04;}
+  @mixin icon-logo{ width:calc(222px
   / 2); height:calc(40px
-  / 2); background-position: -webkit-calc(0px
-  / 2) -webkit-calc(0px
-  / 2); background-position: -moz-calc(0px
-  / 2) -moz-calc(0px
   / 2); background-position: calc(0px
   / 2) calc(0px
-  / 2); } .icon-logo
-  { @include icon-logo; }
-  @mixin icon-main-list01{ width:-webkit-calc(96px
-  / 2); width:-moz-calc(96px
-  / 2); width:calc(96px
-  / 2); height:-webkit-calc(92px
-  / 2); height:-moz-calc(92px
+  / 2); } .icon-logo{@include icon-logo;}
+  @mixin icon-main-list01{ width:calc(96px
   / 2); height:calc(92px
-  / 2); background-position: -webkit-calc(0px
-  / 2) -webkit-calc(-45px
-  / 2); background-position: -moz-calc(0px
-  / 2) -moz-calc(-45px
   / 2); background-position: calc(0px
   / 2) calc(-45px
-  / 2); } .icon-main-list01
-  { @include icon-main-list01; }
-  @mixin icon-main-list02{ width:-webkit-calc(72px
-  / 2); width:-moz-calc(72px
-  / 2); width:calc(72px
-  / 2); height:-webkit-calc(74px
-  / 2); height:-moz-calc(74px
+  / 2); } .icon-main-list01{@include icon-main-list01;}
+  @mixin icon-main-list02{ width:calc(72px
   / 2); height:calc(74px
-  / 2); background-position: -webkit-calc(-227px
-  / 2) -webkit-calc(-83px
-  / 2); background-position: -moz-calc(-227px
-  / 2) -moz-calc(-83px
   / 2); background-position: calc(-227px
   / 2) calc(-83px
-  / 2); } .icon-main-list02
-  { @include icon-main-list02; }
-  @mixin icon-main-list03{ width:-webkit-calc(72px
-  / 2); width:-moz-calc(72px
-  / 2); width:calc(72px
-  / 2); height:-webkit-calc(78px
-  / 2); height:-moz-calc(78px
+  / 2); } .icon-main-list02{@include icon-main-list02;}
+  @mixin icon-main-list03{ width:calc(72px
   / 2); height:calc(78px
-  / 2); background-position: -webkit-calc(-227px
-  / 2) -webkit-calc(0px
-  / 2); background-position: -moz-calc(-227px
-  / 2) -moz-calc(0px
   / 2); background-position: calc(-227px
   / 2) calc(0px
-  / 2); } .icon-main-list03
-  { @include icon-main-list03; }
-  @mixin icon-main-list04{ width:-webkit-calc(70px
-  / 2); width:-moz-calc(70px
-  / 2); width:calc(70px
-  / 2); height:-webkit-calc(64px
-  / 2); height:-moz-calc(64px
+  / 2); } .icon-main-list03{@include icon-main-list03;}
+  @mixin icon-main-list04{ width:calc(70px
   / 2); height:calc(64px
-  / 2); background-position: -webkit-calc(0px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(0px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(0px
   / 2) calc(-227px
-  / 2); } .icon-main-list04
-  { @include icon-main-list04; }
-  @mixin icon-menu-active{ width:-webkit-calc(38px
-  / 2); width:-moz-calc(38px
-  / 2); width:calc(38px
-  / 2); height:-webkit-calc(28px
-  / 2); height:-moz-calc(28px
+  / 2); } .icon-main-list04{@include icon-main-list04;}
+  @mixin icon-menu-active{ width:calc(38px
   / 2); height:calc(28px
-  / 2); background-position: -webkit-calc(-304px
-  / 2) -webkit-calc(-256px
-  / 2); background-position: -moz-calc(-304px
-  / 2) -moz-calc(-256px
   / 2); background-position: calc(-304px
   / 2) calc(-256px
-  / 2); } .icon-menu-active
-  { @include icon-menu-active; }
-  @mixin icon-menu{ width:-webkit-calc(38px
-  / 2); width:-moz-calc(38px
-  / 2); width:calc(38px
-  / 2); height:-webkit-calc(28px
-  / 2); height:-moz-calc(28px
+  / 2); } .icon-menu-active{@include icon-menu-active;}
+  @mixin icon-menu{ width:calc(38px
   / 2); height:calc(28px
-  / 2); background-position: -webkit-calc(-170px
-  / 2) -webkit-calc(-187px
-  / 2); background-position: -moz-calc(-170px
-  / 2) -moz-calc(-187px
   / 2); background-position: calc(-170px
   / 2) calc(-187px
-  / 2); } .icon-menu
-  { @include icon-menu; }
-  @mixin icon-more{ width:-webkit-calc(20px
-  / 2); width:-moz-calc(20px
-  / 2); width:calc(20px
-  / 2); height:-webkit-calc(20px
-  / 2); height:-moz-calc(20px
+  / 2); } .icon-menu{@include icon-menu;}
+  @mixin icon-more{ width:calc(20px
   / 2); height:calc(20px
-  / 2); background-position: -webkit-calc(-347px
-  / 2) -webkit-calc(-256px
-  / 2); background-position: -moz-calc(-347px
-  / 2) -moz-calc(-256px
   / 2); background-position: calc(-347px
   / 2) calc(-256px
-  / 2); } .icon-more
-  { @include icon-more; }
-  @mixin icon-next-black{ width:-webkit-calc(16px
-  / 2); width:-moz-calc(16px
-  / 2); width:calc(16px
-  / 2); height:-webkit-calc(24px
-  / 2); height:-moz-calc(24px
+  / 2); } .icon-more{@include icon-more;}
+  @mixin icon-next-black{ width:calc(16px
   / 2); height:calc(24px
-  / 2); background-position: -webkit-calc(-280px
-  / 2) -webkit-calc(-162px
-  / 2); background-position: -moz-calc(-280px
-  / 2) -moz-calc(-162px
   / 2); background-position: calc(-280px
   / 2) calc(-162px
-  / 2); } .icon-next-black
-  { @include icon-next-black; }
-  @mixin icon-next{ width:-webkit-calc(12px
-  / 2); width:-moz-calc(12px
-  / 2); width:calc(12px
-  / 2); height:-webkit-calc(22px
-  / 2); height:-moz-calc(22px
+  / 2); } .icon-next-black{@include icon-next-black;}
+  @mixin icon-next{ width:calc(12px
   / 2); height:calc(22px
-  / 2); background-position: -webkit-calc(-277px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(-277px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(-277px
   / 2) calc(-227px
-  / 2); } .icon-next
-  { @include icon-next; }
-  @mixin icon-privacy-active{ width:-webkit-calc(36px
-  / 2); width:-moz-calc(36px
-  / 2); width:calc(36px
-  / 2); height:-webkit-calc(38px
-  / 2); height:-moz-calc(38px
+  / 2); } .icon-next{@include icon-next;}
+  @mixin icon-privacy-active{ width:calc(36px
   / 2); height:calc(38px
-  / 2); background-position: -webkit-calc(0px
-  / 2) -webkit-calc(-296px
-  / 2); background-position: -moz-calc(0px
-  / 2) -moz-calc(-296px
   / 2); background-position: calc(0px
   / 2) calc(-296px
-  / 2); } .icon-privacy-active
-  { @include icon-privacy-active; }
-  @mixin icon-privacy{ width:-webkit-calc(36px
-  / 2); width:-moz-calc(36px
-  / 2); width:calc(36px
-  / 2); height:-webkit-calc(38px
-  / 2); height:-moz-calc(38px
+  / 2); } .icon-privacy-active{@include icon-privacy-active;}
+  @mixin icon-privacy{ width:calc(36px
   / 2); height:calc(38px
-  / 2); background-position: -webkit-calc(-41px
-  / 2) -webkit-calc(-296px
-  / 2); background-position: -moz-calc(-41px
-  / 2) -moz-calc(-296px
   / 2); background-position: calc(-41px
   / 2) calc(-296px
-  / 2); } .icon-privacy
-  { @include icon-privacy; }
-  @mixin icon-star{ width:-webkit-calc(29px
-  / 2); width:-moz-calc(29px
-  / 2); width:calc(29px
-  / 2); height:-webkit-calc(32px
-  / 2); height:-moz-calc(32px
+  / 2); } .icon-privacy{@include icon-privacy;}
+  @mixin icon-star{ width:calc(29px
   / 2); height:calc(32px
-  / 2); background-position: -webkit-calc(-243px
-  / 2) -webkit-calc(-227px
-  / 2); background-position: -moz-calc(-243px
-  / 2) -moz-calc(-227px
   / 2); background-position: calc(-243px
   / 2) calc(-227px
-  / 2); } .icon-star
-  { @include icon-star; }
-  @mixin icon-symbol{ width:-webkit-calc(92px
-  / 2); width:-moz-calc(92px
-  / 2); width:calc(92px
-  / 2); height:-webkit-calc(82px
-  / 2); height:-moz-calc(82px
+  / 2); } .icon-star{@include icon-star;}
+  @mixin icon-symbol{ width:calc(92px
   / 2); height:calc(82px
-  / 2); background-position: -webkit-calc(-101px
-  / 2) -webkit-calc(-45px
-  / 2); background-position: -moz-calc(-101px
-  / 2) -moz-calc(-45px
   / 2); background-position: calc(-101px
   / 2) calc(-45px
-  / 2); } .icon-symbol
-  { @include icon-symbol; }
-  @mixin icon-unchecked{ width:-webkit-calc(22px
-  / 2); width:-moz-calc(22px
-  / 2); width:calc(22px
-  / 2); height:-webkit-calc(18px
-  / 2); height:-moz-calc(18px
+  / 2); } .icon-symbol{@include icon-symbol;}
+  @mixin icon-unchecked{ width:calc(22px
   / 2); height:calc(18px
-  / 2); background-position: -webkit-calc(-198px
-  / 2) -webkit-calc(-107px
-  / 2); background-position: -moz-calc(-198px
-  / 2) -moz-calc(-107px
   / 2); background-position: calc(-198px
   / 2) calc(-107px
-  / 2); } .icon-unchecked
-  { @include icon-unchecked; }
-  @mixin icon-user-transform-active{ width:-webkit-calc(48px
-  / 2); width:-moz-calc(48px
-  / 2); width:calc(48px
-  / 2); height:-webkit-calc(40px
-  / 2); height:-moz-calc(40px
+  / 2); } .icon-unchecked{@include icon-unchecked;}
+  @mixin icon-user-transform-active{ width:calc(48px
   / 2); height:calc(40px
-  / 2); background-position: -webkit-calc(-227px
-  / 2) -webkit-calc(-162px
-  / 2); background-position: -moz-calc(-227px
-  / 2) -moz-calc(-162px
   / 2); background-position: calc(-227px
   / 2) calc(-162px
-  / 2); } .icon-user-transform-active
-  { @include icon-user-transform-active; }
-  @mixin icon-user-transform{ width:-webkit-calc(48px
-  / 2); width:-moz-calc(48px
-  / 2); width:calc(48px
-  / 2); height:-webkit-calc(40px
-  / 2); height:-moz-calc(40px
+  / 2); } .icon-user-transform-active{@include icon-user-transform-active;}
+  @mixin icon-user-transform{ width:calc(48px
   / 2); height:calc(40px
-  / 2); background-position: -webkit-calc(-170px
-  / 2) -webkit-calc(-142px
-  / 2); background-position: -moz-calc(-170px
-  / 2) -moz-calc(-142px
   / 2); background-position: calc(-170px
   / 2) calc(-142px
-  / 2); } .icon-user-transform
-  { @include icon-user-transform; }
+  / 2); } .icon-user-transform{@include icon-user-transform;}

@@ -1,169 +1,170 @@
   @mixin icon { display: inline-block; background-image: url($sprite-url); background-repeat: no-repeat; background-size: calc(370px/
   2) calc(334px
-  / 2); } .icon {@include icon;}
+  / 2); } .icon {font-size:0;} .icon::before {@include icon; content:'';} .icon + em, .icon + b { margin-left:7px;} .column >
+  .icon + em, .column > .icon + b { margin-left:0; }
 
   @mixin icon-back{ width:calc(20px
   / 2); height:calc(34px
   / 2); background-position: calc(-198px
   / 2) calc(-45px
-  / 2); } .icon-back{@include icon-back;}
+  / 2); } .icon-back::before{@include icon-back;}
   @mixin icon-calendar{ width:calc(32px
   / 2); height:calc(28px
   / 2); background-position: calc(-82px
   / 2) calc(-296px
-  / 2); } .icon-calendar{@include icon-calendar;}
+  / 2); } .icon-calendar::before{@include icon-calendar;}
   @mixin icon-caution{ width:calc(80px
   / 2); height:calc(80px
   / 2); background-position: calc(0px
   / 2) calc(-142px
-  / 2); } .icon-caution{@include icon-caution;}
+  / 2); } .icon-caution::before{@include icon-caution;}
   @mixin icon-certification-active{ width:calc(38px
   / 2); height:calc(36px
   / 2); background-position: calc(-157px
   / 2) calc(-227px
-  / 2); } .icon-certification-active{@include icon-certification-active;}
+  / 2); } .icon-certification-active::before{@include icon-certification-active;}
   @mixin icon-certification{ width:calc(38px
   / 2); height:calc(36px
   / 2); background-position: calc(-200px
   / 2) calc(-227px
-  / 2); } .icon-certification{@include icon-certification;}
+  / 2); } .icon-certification::before{@include icon-certification;}
   @mixin icon-checked{ width:calc(22px
   / 2); height:calc(18px
   / 2); background-position: calc(-198px
   / 2) calc(-84px
-  / 2); } .icon-checked{@include icon-checked;}
+  / 2); } .icon-checked::before{@include icon-checked;}
   @mixin icon-close{ width:calc(28px
   / 2); height:calc(28px
   / 2); background-position: calc(-119px
   / 2) calc(-296px
-  / 2); } .icon-close{@include icon-close;}
+  / 2); } .icon-close::before{@include icon-close;}
   @mixin icon-dot-gray{ width:calc(8px
   / 2); height:calc(8px
   / 2); background-position: calc(-280px
   / 2) calc(-191px
-  / 2); } .icon-dot-gray{@include icon-dot-gray;}
+  / 2); } .icon-dot-gray::before{@include icon-dot-gray;}
   @mixin icon-dot{ width:calc(8px
   / 2); height:calc(8px
   / 2); background-position: calc(-227px
   / 2) calc(-207px
-  / 2); } .icon-dot{@include icon-dot;}
+  / 2); } .icon-dot::before{@include icon-dot;}
   @mixin icon-finish{ width:calc(80px
   / 2); height:calc(80px
   / 2); background-position: calc(-85px
   / 2) calc(-142px
-  / 2); } .icon-finish{@include icon-finish;}
+  / 2); } .icon-finish::before{@include icon-finish;}
   @mixin icon-home-active{ width:calc(36px
   / 2); height:calc(40px
   / 2); background-position: calc(-75px
   / 2) calc(-227px
-  / 2); } .icon-home-active{@include icon-home-active;}
+  / 2); } .icon-home-active::before{@include icon-home-active;}
   @mixin icon-home{ width:calc(36px
   / 2); height:calc(40px
   / 2); background-position: calc(-116px
   / 2) calc(-227px
-  / 2); } .icon-home{@include icon-home;}
+  / 2); } .icon-home::before{@include icon-home;}
   @mixin icon-login-type01{ width:calc(58px
   / 2); height:calc(64px
   / 2); background-position: calc(-304px
   / 2) calc(-140px
-  / 2); } .icon-login-type01{@include icon-login-type01;}
+  / 2); } .icon-login-type01::before{@include icon-login-type01;}
   @mixin icon-login-type02{ width:calc(60px
   / 2); height:calc(64px
   / 2); background-position: calc(-304px
   / 2) calc(-71px
-  / 2); } .icon-login-type02{@include icon-login-type02;}
+  / 2); } .icon-login-type02::before{@include icon-login-type02;}
   @mixin icon-login-type03{ width:calc(66px
   / 2); height:calc(66px
   / 2); background-position: calc(-304px
   / 2) calc(0px
-  / 2); } .icon-login-type03{@include icon-login-type03;}
+  / 2); } .icon-login-type03::before{@include icon-login-type03;}
   @mixin icon-login-type04{ width:calc(66px
   / 2); height:calc(42px
   / 2); background-position: calc(-304px
   / 2) calc(-209px
-  / 2); } .icon-login-type04{@include icon-login-type04;}
+  / 2); } .icon-login-type04::before{@include icon-login-type04;}
   @mixin icon-logo{ width:calc(222px
   / 2); height:calc(40px
   / 2); background-position: calc(0px
   / 2) calc(0px
-  / 2); } .icon-logo{@include icon-logo;}
-  @mixin icon-main-list01{ width:calc(96px
-  / 2); height:calc(92px
-  / 2); background-position: calc(0px
-  / 2) calc(-45px
-  / 2); } .icon-main-list01{@include icon-main-list01;}
-  @mixin icon-main-list02{ width:calc(72px
+  / 2); } .icon-logo::before{@include icon-logo;}
+  @mixin icon-major-work-02{ width:calc(72px
   / 2); height:calc(74px
   / 2); background-position: calc(-227px
   / 2) calc(-83px
-  / 2); } .icon-main-list02{@include icon-main-list02;}
-  @mixin icon-main-list03{ width:calc(72px
+  / 2); } .icon-major-work-02::before{@include icon-major-work-02;}
+  @mixin icon-major-work-03{ width:calc(72px
   / 2); height:calc(78px
   / 2); background-position: calc(-227px
   / 2) calc(0px
-  / 2); } .icon-main-list03{@include icon-main-list03;}
-  @mixin icon-main-list04{ width:calc(70px
+  / 2); } .icon-major-work-03::before{@include icon-major-work-03;}
+  @mixin icon-major-work-04{ width:calc(70px
   / 2); height:calc(64px
   / 2); background-position: calc(0px
   / 2) calc(-227px
-  / 2); } .icon-main-list04{@include icon-main-list04;}
+  / 2); } .icon-major-work-04::before{@include icon-major-work-04;}
+  @mixin icon-major-work{ width:calc(96px
+  / 2); height:calc(92px
+  / 2); background-position: calc(0px
+  / 2) calc(-45px
+  / 2); } .icon-major-work::before{@include icon-major-work;}
   @mixin icon-menu-active{ width:calc(38px
   / 2); height:calc(28px
   / 2); background-position: calc(-304px
   / 2) calc(-256px
-  / 2); } .icon-menu-active{@include icon-menu-active;}
+  / 2); } .icon-menu-active::before{@include icon-menu-active;}
   @mixin icon-menu{ width:calc(38px
   / 2); height:calc(28px
   / 2); background-position: calc(-170px
   / 2) calc(-187px
-  / 2); } .icon-menu{@include icon-menu;}
+  / 2); } .icon-menu::before{@include icon-menu;}
   @mixin icon-more{ width:calc(20px
   / 2); height:calc(20px
   / 2); background-position: calc(-347px
   / 2) calc(-256px
-  / 2); } .icon-more{@include icon-more;}
+  / 2); } .icon-more::before{@include icon-more;}
   @mixin icon-next-black{ width:calc(16px
   / 2); height:calc(24px
   / 2); background-position: calc(-280px
   / 2) calc(-162px
-  / 2); } .icon-next-black{@include icon-next-black;}
+  / 2); } .icon-next-black::before{@include icon-next-black;}
   @mixin icon-next{ width:calc(12px
   / 2); height:calc(22px
   / 2); background-position: calc(-277px
   / 2) calc(-227px
-  / 2); } .icon-next{@include icon-next;}
+  / 2); } .icon-next::before{@include icon-next;}
   @mixin icon-privacy-active{ width:calc(36px
   / 2); height:calc(38px
   / 2); background-position: calc(0px
   / 2) calc(-296px
-  / 2); } .icon-privacy-active{@include icon-privacy-active;}
+  / 2); } .icon-privacy-active::before{@include icon-privacy-active;}
   @mixin icon-privacy{ width:calc(36px
   / 2); height:calc(38px
   / 2); background-position: calc(-41px
   / 2) calc(-296px
-  / 2); } .icon-privacy{@include icon-privacy;}
+  / 2); } .icon-privacy::before{@include icon-privacy;}
   @mixin icon-star{ width:calc(29px
   / 2); height:calc(32px
   / 2); background-position: calc(-243px
   / 2) calc(-227px
-  / 2); } .icon-star{@include icon-star;}
+  / 2); } .icon-star::before{@include icon-star;}
   @mixin icon-symbol{ width:calc(92px
   / 2); height:calc(82px
   / 2); background-position: calc(-101px
   / 2) calc(-45px
-  / 2); } .icon-symbol{@include icon-symbol;}
+  / 2); } .icon-symbol::before{@include icon-symbol;}
   @mixin icon-unchecked{ width:calc(22px
   / 2); height:calc(18px
   / 2); background-position: calc(-198px
   / 2) calc(-107px
-  / 2); } .icon-unchecked{@include icon-unchecked;}
+  / 2); } .icon-unchecked::before{@include icon-unchecked;}
   @mixin icon-user-transform-active{ width:calc(48px
   / 2); height:calc(40px
   / 2); background-position: calc(-227px
   / 2) calc(-162px
-  / 2); } .icon-user-transform-active{@include icon-user-transform-active;}
+  / 2); } .icon-user-transform-active::before{@include icon-user-transform-active;}
   @mixin icon-user-transform{ width:calc(48px
   / 2); height:calc(40px
   / 2); background-position: calc(-170px
   / 2) calc(-142px
-  / 2); } .icon-user-transform{@include icon-user-transform;}
+  / 2); } .icon-user-transform::before{@include icon-user-transform;}

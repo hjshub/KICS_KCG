@@ -15,9 +15,9 @@
 
 
   <title>인증 유형 선택 | 차세대 형사사법정보시스템 KICS</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
-  <!-- <link rel="stylesheet" href="../assets/css/ui.css" /> -->
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
+  <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -25,13 +25,14 @@
 
 <body>
   <div id="layout">
-    <!-- #gnb -->
+    <!-- page navigation -->
 
-    <header id="gnb">
+    <header class="page-nav">
       <div class="inner">
         <div class="flex-wrap edge h-wrap">
           <span>
-            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+            <a href="javascript:void(0);" onclick="history.back()">
+              <i class="icon icon-back"></i>
               <em class="hidden-txt">뒤로가기</em>
             </a>
           </span>
@@ -42,7 +43,7 @@
 
 
 
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
@@ -51,22 +52,22 @@
           <div class="inner">
             <ul class="grid-wrap gap15">
               <li>
-                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPassword" disabled>
+                <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmPassword" disabled>
                   <em>아이디&#47;비밀번호</em>
                 </button>
               </li>
               <li>
-                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmCertification" disabled>
+                <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmCertification" disabled>
                   <em>행정전자서명 인증서</em>
                 </button>
               </li>
               <li>
-                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPattern" disabled>
+                <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmPattern" disabled>
                   <em>패턴</em>
                 </button>
               </li>
               <li>
-                <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPinNumber" disabled>
+                <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmPinNumber" disabled>
                   <em>PIN 번호</em>
                 </button>
               </li>
@@ -79,7 +80,7 @@
 
     <!-- 모달 -->
     <!-- 비밀번호 입력 -->
-    <div class="modal full animate fast" id="modal-confirmPassword">
+    <div class="modal full animate fast" id="modal_confirmPassword">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -123,7 +124,7 @@
     </div>
 
     <!-- 행정전자서명 인증서 비밀번호 입력 -->
-    <div class="modal full gray animate fast" id="modal-confirmCertification">
+    <div class="modal full gray animate fast" id="modal_confirmCertification">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -186,7 +187,7 @@
     </div>
 
     <!-- 패턴 입력 -->
-    <div class="modal full animate fast" id="modal-confirmPattern">
+    <div class="modal full animate fast" id="modal_confirmPattern">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -244,7 +245,7 @@
     </div>
 
     <!-- PIN번호 입력 -->
-    <div class="modal full animate fast" id="modal-confirmPinNumber">
+    <div class="modal full animate fast" id="modal_confirmPinNumber">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">

@@ -294,10 +294,6 @@ textarea {
     }
 
     .icon {
-      & + em {
-        margin-left: 0;
-        top: 0;
-      }
       & + * {
         margin-top: 20px;
       }

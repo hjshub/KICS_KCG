@@ -5,9 +5,13 @@
   </head>
   <body>
     <div id="layout" class="main">
-      <!-- #gnb -->
-      @@include('./include/gnb.html', {path:'.' })
-      <!-- // #gnb -->
+      <!-- gnb -->
+      @@include('./include/gnb.html')
+      <!-- // gnb -->
+
+      <!-- page navigation -->
+      @@include('./include/page_nav.html', {path:'.' })
+      <!-- // page navigation -->
 
       <!-- #contents -->
       <main>
@@ -15,16 +19,25 @@
           <div class="inner">
             <div class="grid-wrap gap30 top-grid-area inner">
               <div class="flex-wrap">
-                <div class="flex-wrap center symbol"><em class="hidden-txt">해양경찰</em></div>
+                <div class="flex-wrap center symbol">
+                  <i class="icon icon-symbol"></i>
+                  <em class="hidden-txt">해양경찰</em>
+                </div>
                 <div class="flex-wrap column start edge info">
                   <em>해양경찰 형사사법정보시스템 입니다.</em>
                   <span class="log">이용을 위해 <b class="txt-underline txt-color blue5">로그인</b>을 해주세요! </span>
                 </div>
               </div>
               <div class="flex-wrap edge user-guide">
-                <span class="flex-wrap"><em class="hidden-txt">공지</em></span>
+                <span class="flex-wrap">
+                  <i class="icon icon-notice"></i>
+                  <em class="hidden-txt">공지</em>
+                </span>
                 <span class="txt">[KICS 전체] 사건관리시스템은 사용방법입니다.</span>
-                <button type="button" class="flex-wrap button-close-widget"><em class="hidden-txt">닫기</em></button>
+                <button type="button" class="flex-wrap button-close-widget">
+                  <i class="icon icon-close"></i>
+                  <em class="hidden-txt">닫기</em>
+                </button>
               </div>
             </div>
           </div>
@@ -72,25 +85,25 @@
                   <ul>
                     <li class="flex-wrap">
                       <span class="caption"><em>KICS 전체</em></span>
-                      <span class="txtInfo">
+                      <span class="txt-info">
                         <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
                       </span>
                     </li>
                     <li class="flex-wrap">
                       <span class="caption"><em>기타</em></span>
-                      <span class="txtInfo">
+                      <span class="txt-info">
                         <a href="">수사결정 시스템 매뉴얼입니다.</a>
                       </span>
                     </li>
                     <li class="flex-wrap">
                       <span class="caption"><em>KICS 전체</em></span>
-                      <span class="txtInfo">
+                      <span class="txt-info">
                         <a href="">사건관리시스템은 사용방법입니다.</a>
                       </span>
                     </li>
                     <li class="flex-wrap">
                       <span class="caption"><em>KICS 전체</em></span>
-                      <span class="txtInfo">
+                      <span class="txt-info">
                         <a href="">사건관리시스템은 사용방법입니다.</a>
                       </span>
                     </li>
@@ -102,10 +115,6 @@
         </section>
       </main>
       <!-- // #contents -->
-
-      <!-- #footer -->
-      @@include('./include/footer.html')
-      <!-- // #footer -->
     </div>
   </body>
 </html>

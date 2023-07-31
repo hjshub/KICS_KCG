@@ -22,5 +22,3 @@ function getCookie(cName) {
   }
   return unescape(cValue);
 }
-
-export { setCookie, getCookie };

@@ -214,12 +214,6 @@ main {
         height: 86px;
         border-radius: 50%;
         background-color: $white;
-
-        &::before {
-          @include icon;
-          @include icon-symbol;
-          content: '';
-        }
       }
 
       .info {
@@ -296,16 +290,6 @@ main {
         border-radius: 30px;
         color: $white;
 
-        > span {
-          &:first-of-type {
-            &::before {
-              @include icon;
-              @include icon-notice;
-              content: '';
-            }
-          }
-        }
-
         .txt {
           font-size: 1.8rem;
           width: 100%;
@@ -319,10 +303,10 @@ main {
         }
 
         .button-close-widget {
-          &::before {
-            @include icon;
-            @include icon-close;
-            content: '';
+          &:active:enabled {
+            overflow: visible;
+            @include transform(scale(1));
+            background-color: transparent !important;
           }
         }
       }
@@ -497,11 +481,12 @@ main {
             }
           }
 
-          .txtInfo {
+          .txt-info {
             @include ellipsis;
             width: 100%;
             max-width: none;
             font-size: 1.8rem;
+            margin-top: 0;
 
             a {
               vertical-align: top;

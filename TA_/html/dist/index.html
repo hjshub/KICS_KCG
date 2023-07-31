@@ -15,9 +15,9 @@
 
 
   <title>차세대 형사사법정보시스템 KICS</title>
-  <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/vendor.js"></script>
-  <!-- <link rel="stylesheet" href="assets/css/ui.css" /> -->
+  <script defer src="assets/js/lib.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <link rel="stylesheet" href="assets/css/ui.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
 
@@ -25,12 +25,45 @@
 
 <body>
   <div id="layout" class="main">
-    <!-- #gnb -->
-    <header id="gnb">
-      <nav class="page-nav">
+    <!-- gnb -->
+    <nav class="gnb">
+      <div class="inner">
+        <ul class="grid-wrap col-4 gap-none">
+          <li class="flex-wrap center active">
+            <a href="../index.html">
+              <span class="flex-wrap"><em>메인화면</em></span>
+            </a>
+          </li>
+          <li class="flex-wrap center">
+            <a href="">
+              <span class="flex-wrap"><em>사용자전환</em></span>
+            </a>
+          </li>
+          <li class="flex-wrap center">
+            <a href="">
+              <span class="flex-wrap"><em>개인정보관리</em></span>
+            </a>
+          </li>
+          <li class="flex-wrap center">
+            <a href="">
+              <span class="flex-wrap"><em>인증센터</em></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- // gnb -->
+
+    <!-- page navigation -->
+    <header class="page-nav">
+      <nav>
         <div class="flex-wrap edge inner h-wrap">
           <span>
-            <a href="" class="icon icon-logo"><em class="hidden-txt">해양경찰</em></a>
+            <a href="">
+              <i class="icon icon-logo"></i>
+              <em class="hidden-txt">해양경찰</em>
+            </a>
           </span>
           <h1 class="hidden-txt">메인</h1>
           <span class="button--allmenu">
@@ -45,7 +78,7 @@
       </nav>
     </header>
 
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
@@ -53,16 +86,25 @@
         <div class="inner">
           <div class="grid-wrap gap30 top-grid-area inner">
             <div class="flex-wrap">
-              <div class="flex-wrap center symbol"><em class="hidden-txt">해양경찰</em></div>
+              <div class="flex-wrap center symbol">
+                <i class="icon icon-symbol"></i>
+                <em class="hidden-txt">해양경찰</em>
+              </div>
               <div class="flex-wrap column start edge info">
                 <em>해양경찰 형사사법정보시스템 입니다.</em>
                 <span class="log">이용을 위해 <b class="txt-underline txt-color blue5">로그인</b>을 해주세요! </span>
               </div>
             </div>
             <div class="flex-wrap edge user-guide">
-              <span class="flex-wrap"><em class="hidden-txt">공지</em></span>
+              <span class="flex-wrap">
+                <i class="icon icon-notice"></i>
+                <em class="hidden-txt">공지</em>
+              </span>
               <span class="txt">[KICS 전체] 사건관리시스템은 사용방법입니다.</span>
-              <button type="button" class="flex-wrap button-close-widget"><em class="hidden-txt">닫기</em></button>
+              <button type="button" class="flex-wrap button-close-widget">
+                <i class="icon icon-close"></i>
+                <em class="hidden-txt">닫기</em>
+              </button>
             </div>
           </div>
         </div>
@@ -110,25 +152,25 @@
                 <ul>
                   <li class="flex-wrap">
                     <span class="caption"><em>KICS 전체</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>기타</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">수사결정 시스템 매뉴얼입니다.</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>KICS 전체</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">사건관리시스템은 사용방법입니다.</a>
                     </span>
                   </li>
                   <li class="flex-wrap">
                     <span class="caption"><em>KICS 전체</em></span>
-                    <span class="txtInfo">
+                    <span class="txt-info">
                       <a href="">사건관리시스템은 사용방법입니다.</a>
                     </span>
                   </li>
@@ -140,36 +182,6 @@
       </section>
     </main>
     <!-- // #contents -->
-
-    <!-- #footer -->
-    <footer>
-      <div class="inner">
-        <ul class="grid-wrap col-4 gap-none">
-          <li class="flex-wrap center active">
-            <a href="../index.html">
-              <span class="flex-wrap"><em>메인화면</em></span>
-            </a>
-          </li>
-          <li class="flex-wrap center">
-            <a href="">
-              <span class="flex-wrap"><em>사용자전환</em></span>
-            </a>
-          </li>
-          <li class="flex-wrap center">
-            <a href="">
-              <span class="flex-wrap"><em>개인정보관리</em></span>
-            </a>
-          </li>
-          <li class="flex-wrap center">
-            <a href="">
-              <span class="flex-wrap"><em>인증센터</em></span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-
-    <!-- // #footer -->
   </div>
 </body>
 

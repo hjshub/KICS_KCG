@@ -5,9 +5,9 @@
   </head>
   <body>
     <div id="layout">
-      <!-- #gnb -->
-      @@include('../include/gnb2.html', { menu: false, page_title:"인증 유형 선택", path:'..' })
-      <!-- // #gnb -->
+      <!-- page navigation -->
+      @@include('../include/page_nav_02.html', {menu: false, page_title:"인증 유형 선택", path:'..'})
+      <!-- // page navigation -->
 
       <!-- #contents -->
       <main>
@@ -16,22 +16,22 @@
             <div class="inner">
               <ul class="grid-wrap gap15">
                 <li>
-                  <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPassword">
+                  <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmPassword">
                     <em>아이디&#47;비밀번호</em>
                   </button>
                 </li>
                 <li>
-                  <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmCertification">
+                  <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmCertification">
                     <em>행정전자서명 인증서</em>
                   </button>
                 </li>
                 <li>
-                  <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPattern">
+                  <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmPattern">
                     <em>패턴</em>
                   </button>
                 </li>
                 <li>
-                  <button type="button" class="flex-wrap edge hasIcon button-active-modal" data-modal-name="confirmPinNumber">
+                  <button type="button" class="flex-wrap edge type-02 button-active-modal" data-modal-name="confirmPinNumber">
                     <em>PIN 번호</em>
                   </button>
                 </li>
@@ -44,18 +44,18 @@
 
       <!-- 모달 -->
       <!-- 비밀번호 입력 -->
-      <div class="modal full animate fast" id="modal-confirmPassword">@@include('../include/modal_confirmPassword.html')</div>
+      <div class="modal full animate fast" id="modal_confirmPassword">@@include('../include/modal_confirmPassword.html')</div>
 
       <!-- 행정전자서명 인증서 비밀번호 입력 -->
-      <div class="modal full gray animate fast" id="modal-confirmCertification">
+      <div class="modal full gray animate fast" id="modal_confirmCertification">
         @@include('../include/modal_confirmCertification.html')
       </div>
 
       <!-- 패턴 입력 -->
-      <div class="modal full animate fast" id="modal-confirmPattern">@@include('../include/modal_confirmPattern.html')</div>
+      <div class="modal full animate fast" id="modal_confirmPattern">@@include('../include/modal_confirmPattern.html')</div>
 
       <!-- PIN번호 입력 -->
-      <div class="modal full animate fast" id="modal-confirmPinNumber">@@include('../include/modal_confirmPinNumber.html')</div>
+      <div class="modal full animate fast" id="modal_confirmPinNumber">@@include('../include/modal_confirmPinNumber.html')</div>
     </div>
   </body>
 </html>

@@ -15,9 +15,9 @@
 
 
   <title>로그인 유형 선택 | 차세대 형사사법정보시스템 KICS</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
-  <!-- <link rel="stylesheet" href="../assets/css/ui.css" /> -->
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
+  <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -25,13 +25,14 @@
 
 <body>
   <div id="layout">
-    <!-- #gnb -->
+    <!-- page navigation -->
 
-    <header id="gnb">
-      <nav class="page-nav">
+    <header class="page-nav">
+      <nav>
         <div class="flex-wrap edge inner h-wrap">
           <span>
-            <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+            <a href="javascript:void(0);" onclick="history.back()">
+              <i class="icon icon-back"></i>
               <em class="hidden-txt">뒤로가기</em>
             </a>
           </span>
@@ -42,7 +43,7 @@
 
 
 
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
     <!-- #contents -->
     <main>
@@ -51,22 +52,22 @@
           <div class="container">
             <ul class="grid-wrap col-2 gap30">
               <li>
-                <button type="button" class="flex-wrap column edge hasIcon button-active-modal" data-modal-name="passwordLogin">
+                <button type="button" class="flex-wrap column edge type-02 button-active-modal" data-modal-name="passwordLogin">
                   <em>아이디&#47;비밀번호</em>
                 </button>
               </li>
               <li>
-                <button type="button" class="flex-wrap column edge hasIcon button-active-modal" data-modal-name="certificationLogin">
+                <button type="button" class="flex-wrap column edge type-02 button-active-modal" data-modal-name="certificationLogin">
                   <em>행정전자서명 인증서</em>
                 </button>
               </li>
               <li>
-                <button type="button" class="flex-wrap column edge hasIcon button-active-modal" data-modal-name="patternLogin">
+                <button type="button" class="flex-wrap column edge type-02 button-active-modal" data-modal-name="patternLogin">
                   <em>패턴</em>
                 </button>
               </li>
               <li>
-                <button type="button" class="flex-wrap column edge hasIcon button-active-modal" data-modal-name="pinNumberLogin">
+                <button type="button" class="flex-wrap column edge type-02 button-active-modal" data-modal-name="pinNumberLogin">
                   <em>PIN 번호</em>
                 </button>
               </li>
@@ -79,7 +80,7 @@
 
     <!-- 모달 -->
     <!-- 비밀번호 입력 -->
-    <div class="modal full animate fast" id="modal-passwordLogin">
+    <div class="modal full animate fast" id="modal_passwordLogin">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -128,7 +129,7 @@
     </div>
 
     <!-- 행정전자서명 인증서 비밀번호 입력 -->
-    <div class="modal full gray animate fast" id="modal-certificationLogin">
+    <div class="modal full gray animate fast" id="modal_certificationLogin">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -191,7 +192,7 @@
     </div>
 
     <!-- 패턴 입력 -->
-    <div class="modal full animate fast" id="modal-patternLogin">
+    <div class="modal full animate fast" id="modal_patternLogin">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -249,7 +250,7 @@
     </div>
 
     <!-- PIN번호 입력 -->
-    <div class="modal full animate fast" id="modal-pinNumberLogin">
+    <div class="modal full animate fast" id="modal_pinNumberLogin">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -332,7 +333,7 @@
     </div>
 
     <!-- 장기 미접속 -->
-    <div class="modal full animate fast" id="modal-errorMsg01">
+    <div class="modal full animate fast" id="modal_errorMsg01">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -373,7 +374,7 @@
     </div>
 
     <!-- 동시접속 안내 -->
-    <div class="modal full animate fast" id="modal-errorMsg02">
+    <div class="modal full animate fast" id="modal_errorMsg02">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">

@@ -16,7 +16,7 @@
   &.main {
     background-color: $blue2;
 
-    #gnb,
+    .page-nav,
     main {
       background-color: transparent;
     }
@@ -38,11 +38,11 @@
       }
     }
 
-    &.signedIn {
+    &.sign-in {
       section {
         &.page-top {
           .symbol {
-            &::before {
+            .icon {
               opacity: 1;
             }
           }
@@ -52,7 +52,7 @@
   }
 
   // &.menu {
-  //   #gnb {
+  //   .page-nav {
   //     background-color: $sub1;
   //   }
 
@@ -236,11 +236,8 @@ main {
         background-color: $white;
         box-shadow: 1px 1px 7px 3px rgba($blue3, 40%);
 
-        &::before {
-          @include icon;
-          @include icon-symbol;
+        .icon {
           opacity: 0.3;
-          content: '';
         }
       }
 
@@ -316,12 +313,6 @@ main {
           height: 150px;
           padding: 25px 15px;
           font-size: 1.2rem;
-
-          &::before {
-            @include icon;
-            @include icon-main-list01;
-            content: '';
-          }
         }
 
         dl {
@@ -433,27 +424,6 @@ main {
         background-color: $primary !important;
         color: $white;
       }
-
-      &::before {
-        @include icon;
-        content: '';
-      }
-
-      &:first-of-type {
-        &::before {
-          @include icon-main-list02;
-        }
-      }
-      &:nth-of-type(2) {
-        &::before {
-          @include icon-main-list03;
-        }
-      }
-      &:nth-of-type(3) {
-        &::before {
-          @include icon-main-list04;
-        }
-      }
     }
   }
 
@@ -485,10 +455,11 @@ main {
             }
           }
 
-          .txtInfo {
+          .txt-info {
             @include ellipsis;
             width: 100%;
             max-width: none;
+            margin-top: 0;
           }
 
           & + li {

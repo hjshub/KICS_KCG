@@ -19,5 +19,3 @@ const gb = (function () {
     isFocus: false,
   };
 })();
-
-export default gb;

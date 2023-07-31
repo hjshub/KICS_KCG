@@ -3,14 +3,6 @@
 // 공통 스크립트
 //-----------------------------------------------------------------
 //
-// import $ from 'jquery';
-// import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
-import gsap from 'gsap';
-import gb from './global.js';
-import { setCookie, getCookie } from './cookie.js';
-
-// swiper style
-//import 'swiper/swiper.min.css';
 
 window.addEventListener('load', () => {
   gb.CommonFunction.init();
@@ -41,7 +33,7 @@ gb.CommonFunction = (function () {
   };
   const modalOn = () => {
     const hash = location.hash;
-    const currentModal = document.querySelector(`.modal#modal-${hash.substring(1)}`);
+    const currentModal = document.querySelector(`.modal#modal_${hash.substring(1)}`);
     currentModal ? currentModal.classList.add('zoomIn') : '';
 
     //console.log(currentModal);
@@ -55,7 +47,7 @@ gb.CommonFunction = (function () {
         const trg = this;
         const modalName = trg.getAttribute('data-modal-name');
         const modal_ = document.querySelectorAll('.modal:not(.dialog)');
-        const currentModal = document.querySelector(`.modal#modal-${modalName}`);
+        const currentModal = document.querySelector(`.modal#modal_${modalName}`);
 
         modal_.forEach(function (el) {
           el.classList.remove('zoomIn');
@@ -74,7 +66,7 @@ gb.CommonFunction = (function () {
 
         const trg = this;
         const modalName = trg.getAttribute('data-modal-name');
-        const currentModal = document.querySelector(`.modal#modal-${modalName}`);
+        const currentModal = document.querySelector(`.modal#modal_${modalName}`);
 
         currentModal.classList.remove('zoomIn');
 

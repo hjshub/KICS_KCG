@@ -5,13 +5,13 @@
   </head>
   <body>
     <div id="layout">
-      <!-- #gnb -->
-      @@include('../include/gnb2.html', { menu: true, page_title:"간편인증 관리", path:'..' })
-      <!-- // #gnb -->
+      <!-- page navigation -->
+      @@include('../include/page_nav_02.html', {menu: true, page_title:"간편인증 관리", path:'..'})
+      <!-- // page navigation -->
 
-      <!-- #lnb -->
-      @@include('../include/lnb.html')
-      <!-- // #lnb -->
+      <!-- #snb -->
+      @@include('../include/snb.html')
+      <!-- // #snb -->
 
       <!-- #contents -->
       <main>
@@ -67,19 +67,19 @@
 
       <!-- 모달 -->
       <!-- 인증확인(아이디/비밀번호) -->
-      <div class="modal full animate fast" id="modal-confirmPassword">@@include('../include/modal_confirmPassword.html')</div>
+      <div class="modal full animate fast" id="modal_confirmPassword">@@include('../include/modal_confirmPassword.html')</div>
 
       <!-- 패턴 등록 -->
-      <div class="modal full animate fast" id="modal-inputPattern">@@include('../include/modal_inputPattern.html')</div>
+      <div class="modal full animate fast" id="modal_inputPattern">@@include('../include/modal_inputPattern.html')</div>
 
       <!-- 패턴 재입력 -->
-      <div class="modal full animate fast" id="modal-inputPattern2">@@include('../include/modal_inputPattern2.html')</div>
+      <div class="modal full animate fast" id="modal_inputPattern2">@@include('../include/modal_inputPattern2.html')</div>
 
       <!-- PIN번호 등록 -->
-      <div class="modal full animate fast" id="modal-inputPinNumber">@@include('../include/modal_inputPinNumber.html')</div>
+      <div class="modal full animate fast" id="modal_inputPinNumber">@@include('../include/modal_inputPinNumber.html')</div>
 
       <!-- PIN번호 재입력 -->
-      <div class="modal full animate fast" id="modal-inputPinNumber2">@@include('../include/modal_inputPinNumber2.html')</div>
+      <div class="modal full animate fast" id="modal_inputPinNumber2">@@include('../include/modal_inputPinNumber2.html')</div>
     </div>
   </body>
 </html>

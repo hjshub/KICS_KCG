@@ -15,9 +15,9 @@
 
 
   <title>간편인증 관리 | 차세대 형사사법정보시스템 KICS</title>
-  <script defer src="../assets/js/main.js"></script>
-  <script defer src="../assets/js/vendor.js"></script>
-  <!-- <link rel="stylesheet" href="../assets/css/ui.css" /> -->
+  <script defer src="../assets/js/lib.js"></script>
+  <script defer src="../assets/js/common.js"></script>
+  <link rel="stylesheet" href="../assets/css/ui.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
 
 
@@ -25,14 +25,17 @@
 
 <body>
   <div id="layout">
-    <!-- #gnb -->
+    <!-- page navigation -->
 
-    <header id="gnb">
-      <div class="menu">
+    <header class="page-nav">
+      <div class="lnb">
         <div class="flex-wrap edge inner h-wrap">
           <div class="flex-wrap major">
             <span>
-              <a href="" class="icon icon-logo"><em class="hidden-txt">해양경찰</em></a>
+              <a href="">
+                <i class="icon icon-logo"></i>
+                <em class="hidden-txt">해양경찰</em>
+              </a>
             </span>
             <ul class="flex-wrap">
               <li><a href="">사건수사</a></li>
@@ -49,7 +52,9 @@
             </span>
             <ul class="flex-wrap">
               <li>
-                <a href="" class="bookmark"><em>즐겨찾기</em></a>
+                <a href="" class="bookmark">
+                  <em>즐겨찾기</em>
+                </a>
               </li>
               <li>
                 <a href="" class="user button--arrow button-active-dropDown"><b>김일남</b>님</a>
@@ -75,7 +80,7 @@
           </div>
         </div>
       </div>
-      <nav class="page-nav">
+      <nav>
         <div class="flex-wrap edge inner h-wrap">
           <span>
             <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
@@ -88,16 +93,16 @@
     </header>
 
 
-    <!-- // #gnb -->
+    <!-- // page navigation -->
 
-    <!-- #lnb -->
-    <aside id="lnb">
+    <!-- #snb -->
+    <aside id="snb">
       <button type="button" class="flex-wrap center button-active-sideMenu">
         <em class="hidden-txt">사이드메뉴 열기</em>
       </button>
     </aside>
 
-    <!-- // #lnb -->
+    <!-- // #snb -->
 
     <!-- #contents -->
     <main>
@@ -145,7 +150,7 @@
 
     <!-- 모달 -->
     <!-- 인증확인(아이디/비밀번호) -->
-    <div class="modal full animate fast" id="modal-confirmPassword">
+    <div class="modal full animate fast" id="modal_confirmPassword">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -189,7 +194,7 @@
     </div>
 
     <!-- 패턴 등록 -->
-    <div class="modal full animate fast" id="modal-inputPattern">
+    <div class="modal full animate fast" id="modal_inputPattern">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -233,7 +238,7 @@
     </div>
 
     <!-- 패턴 재입력 -->
-    <div class="modal full animate fast" id="modal-inputPattern2">
+    <div class="modal full animate fast" id="modal_inputPattern2">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -288,7 +293,7 @@
     </div>
 
     <!-- PIN번호 등록 -->
-    <div class="modal full animate fast" id="modal-inputPinNumber">
+    <div class="modal full animate fast" id="modal_inputPinNumber">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">
@@ -358,7 +363,7 @@
     </div>
 
     <!-- PIN번호 재입력 -->
-    <div class="modal full animate fast" id="modal-inputPinNumber2">
+    <div class="modal full animate fast" id="modal_inputPinNumber2">
       <header class="modal-header">
         <div class="inner">
           <div class="flex-wrap end h-wrap">

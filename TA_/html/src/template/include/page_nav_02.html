@@ -1,10 +1,13 @@
 @@if(menu === true){
-<header id="gnb">
-  <div class="menu">
+<header class="page-nav">
+  <div class="lnb">
     <div class="flex-wrap edge inner h-wrap">
       <div class="flex-wrap major">
         <span>
-          <a href="" class="icon icon-logo"><em class="hidden-txt">해양경찰</em></a>
+          <a href="">
+            <i class="icon icon-logo"></i>
+            <em class="hidden-txt">해양경찰</em>
+          </a>
         </span>
         <ul class="flex-wrap">
           <li><a href="">사건수사</a></li>
@@ -21,7 +24,9 @@
         </span>
         <ul class="flex-wrap">
           <li>
-            <a href="" class="bookmark"><em>즐겨찾기</em></a>
+            <a href="" class="bookmark">
+              <em>즐겨찾기</em>
+            </a>
           </li>
           <li>
             <a href="" class="user button--arrow button-active-dropDown"><b>김일남</b>님</a>
@@ -47,7 +52,7 @@
       </div>
     </div>
   </div>
-  <nav class="page-nav">
+  <nav>
     <div class="flex-wrap edge inner h-wrap">
       <span>
         <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
@@ -59,11 +64,12 @@
   </nav>
 </header>
 } @@if(menu === false){
-<header id="gnb">
-  <nav class="page-nav">
+<header class="page-nav">
+  <nav>
     <div class="flex-wrap edge inner h-wrap">
       <span>
-        <a href="javascript:void(0);" onclick="history.back()" class="icon icon-back">
+        <a href="javascript:void(0);" onclick="history.back()">
+          <i class="icon icon-back"></i>
           <em class="hidden-txt">뒤로가기</em>
         </a>
       </span>

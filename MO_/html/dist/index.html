@@ -15,9 +15,9 @@
 
 
   <title>차세대 형사사법정보시스템 KICS</title>
-  <script defer src="assets/js/main.js"></script>
-  <script defer src="assets/js/vendor.js"></script>
-  <!-- <link rel="stylesheet" href="assets/css/ui.css" /> -->
+  <script defer src="assets/js/lib.js"></script>
+  <script defer src="assets/js/common.js"></script>
+  <link rel="stylesheet" href="assets/css/ui.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
 
@@ -25,117 +25,8 @@
 
 <body>
   <div id="layout" class="main">
-    <!-- #gnb -->
-    <header id="gnb">
-      <div class="inner">
-        <div class="flex-wrap edge h-wrap">
-          <span>
-            <a href="" class="icon icon-logo"><em class="hidden-txt">해양경찰</em></a>
-          </span>
-          <h1 class="hidden-txt">메인</h1>
-        </div>
-      </div>
-    </header>
-
-    <!-- // #gnb -->
-
-    <!-- #contents -->
-    <main>
-      <section class="page-top">
-        <div class="inner">
-          <div class="flex-wrap">
-            <div class="flex-wrap center symbol"><em class="hidden-txt">해양경찰</em></div>
-            <div class="flex-wrap column start edge info">
-              <em>해양경찰 형사사법정보시스템 입니다.</em>
-              <span class="log">이용을 위해<br /><b class="txt-underline txt-color sub1">로그인</b>을 해주세요! </span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div class="major-work inner">
-          <header class="heading-title-wrap">
-            <h2 class="flex-wrap">
-              <strong>주요 업무</strong>
-            </h2>
-          </header>
-          <article>
-            <div class="major-work-01 grid-wrap col-2 gap15">
-              <div>
-                <a href="" class="flex-wrap column edge">
-                  <dl>
-                    <dt><strong>담당사건 목록</strong></dt>
-                    <dd class="txt-color primary">현재 담당중인 사건 확인</dd>
-                  </dl>
-                </a>
-              </div>
-              <div class="flex-wrap column">
-                <button type="button" onclick="location.href=''">
-                  <b>
-                    고래류<br />
-                    처분관리
-                  </b>
-                </button>
-                <button type="button" onclick="location.href=''">
-                  <b>
-                    불법 어획물<br />
-                    방류 명령
-                  </b>
-                </button>
-              </div>
-            </div>
-            <div class="major-work-02 grid-wrap col-3 gap15">
-              <button class="flex-wrap column edge" type="button">
-                <em>사건처리</em>
-              </button>
-              <button class="flex-wrap column edge" type="button">
-                <em>지원</em>
-              </button>
-              <button class="flex-wrap column edge" type="button">
-                <em>정보검색</em>
-              </button>
-            </div>
-          </article>
-        </div>
-        <div class="notice inner">
-          <header class="heading-title-wrap">
-            <h2 class="flex-wrap edge">
-              <strong>공지사항</strong>
-              <a href="" class="flex-wrap"><em>더보기</em><i class="icon icon-next"></i></a>
-            </h2>
-          </header>
-          <article>
-            <ul>
-              <li class="flex-wrap edge">
-                <span class="caption"><em>KICS 전체</em></span>
-                <span class="txtInfo">
-                  <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
-                </span>
-                <span>2024.08.12</span>
-              </li>
-              <li class="flex-wrap edge">
-                <span class="caption"><em>기타</em></span>
-                <span class="txtInfo">
-                  <a href="">수사결정 시스템 매뉴얼입니다.</a>
-                </span>
-                <span>2024.08.12</span>
-              </li>
-              <li class="flex-wrap edge">
-                <span class="caption"><em>KICS 전체</em></span>
-                <span class="txtInfo">
-                  <a href="">사건관리시스템은 사용방법입니다.</a>
-                </span>
-                <span>2024.08.12</span>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </main>
-    <!-- // #contents -->
-
-    <!-- #footer -->
-    <footer>
+    <!-- gnb -->
+    <nav class="gnb">
       <div class="inner">
         <ul class="grid-wrap col-5 gap-none">
           <li>
@@ -165,9 +56,128 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </nav>
 
-    <!-- // #footer -->
+    <!-- // gnb -->
+
+    <!-- page navigation -->
+    <header class="page-nav">
+      <div class="inner">
+        <div class="flex-wrap edge h-wrap">
+          <span>
+            <a href="">
+              <i class="icon icon-logo"></i>
+              <em class="hidden-txt">해양경찰</em>
+            </a>
+          </span>
+          <h1 class="hidden-txt">메인</h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- // page navigation -->
+
+    <!-- #contents -->
+    <main>
+      <section class="page-top">
+        <div class="inner">
+          <div class="flex-wrap">
+            <div class="flex-wrap center symbol">
+              <i class="icon icon-symbol"></i>
+              <em class="hidden-txt">해양경찰</em>
+            </div>
+            <div class="flex-wrap column start edge info">
+              <em>해양경찰 형사사법정보시스템 입니다.</em>
+              <span class="log">이용을 위해<br /><b class="txt-underline txt-color sub1">로그인</b>을 해주세요! </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="major-work inner">
+          <header class="heading-title-wrap">
+            <h2 class="flex-wrap">
+              <strong>주요 업무</strong>
+            </h2>
+          </header>
+          <article>
+            <div class="major-work-01 grid-wrap col-2 gap15">
+              <div>
+                <a href="" class="flex-wrap column edge">
+                  <i class="icon icon-major-work"></i>
+                  <dl>
+                    <dt><strong>담당사건 목록</strong></dt>
+                    <dd class="txt-color primary">현재 담당중인 사건 확인</dd>
+                  </dl>
+                </a>
+              </div>
+              <div class="flex-wrap column">
+                <button type="button" onclick="location.href=''">
+                  <b>
+                    고래류<br />
+                    처분관리
+                  </b>
+                </button>
+                <button type="button" onclick="location.href=''">
+                  <b>
+                    불법 어획물<br />
+                    방류 명령
+                  </b>
+                </button>
+              </div>
+            </div>
+            <div class="major-work-02 grid-wrap col-3 gap15">
+              <button class="flex-wrap column edge" type="button">
+                <i class="icon icon-major-work-02"></i>
+                <em>사건처리</em>
+              </button>
+              <button class="flex-wrap column edge" type="button">
+                <i class="icon icon-major-work-03"></i>
+                <em>지원</em>
+              </button>
+              <button class="flex-wrap column edge" type="button">
+                <i class="icon icon-major-work-04"></i>
+                <em>정보검색</em>
+              </button>
+            </div>
+          </article>
+        </div>
+        <div class="notice inner">
+          <header class="heading-title-wrap">
+            <h2 class="flex-wrap edge">
+              <strong>공지사항</strong>
+              <a href="" class="flex-wrap"><em>더보기</em><i class="icon icon-next"></i></a>
+            </h2>
+          </header>
+          <article>
+            <ul>
+              <li class="flex-wrap edge">
+                <span class="caption"><em>KICS 전체</em></span>
+                <span class="txt-info">
+                  <a href="">공판카드 작성시 주의사항 및 작성 방법 공판카드 작성시 주의사항 및 작성 방법</a>
+                </span>
+                <span>2024.08.12</span>
+              </li>
+              <li class="flex-wrap edge">
+                <span class="caption"><em>기타</em></span>
+                <span class="txt-info">
+                  <a href="">수사결정 시스템 매뉴얼입니다.</a>
+                </span>
+                <span>2024.08.12</span>
+              </li>
+              <li class="flex-wrap edge">
+                <span class="caption"><em>KICS 전체</em></span>
+                <span class="txt-info">
+                  <a href="">사건관리시스템은 사용방법입니다.</a>
+                </span>
+                <span>2024.08.12</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- // #contents -->
   </div>
 </body>
 

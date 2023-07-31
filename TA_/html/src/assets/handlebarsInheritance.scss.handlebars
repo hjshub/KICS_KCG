@@ -1,7 +1,8 @@
 {{#spritesheet}}
   @mixin icon { display: inline-block; background-image: url($sprite-url); background-repeat: no-repeat; background-size: calc({{px.width}}/
   2) calc({{px.height}}
-  / 2); } .icon {@include icon;}
+  / 2); } .icon {font-size:0;} .icon::before {@include icon; content:'';} .icon + em, .icon + b { margin-left:7px;} .column >
+  .icon + em, .column > .icon + b { margin-left:0; }
 {{/spritesheet}}
 
 {{#sprites}}
@@ -9,5 +10,5 @@
   / 2); height:calc({{px.height}}
   / 2); background-position: calc({{px.offset_x}}
   / 2) calc({{px.offset_y}}
-  / 2); } .icon-{{name}}{@include icon-{{name}};}
+  / 2); } .icon-{{name}}::before{@include icon-{{name}};}
 {{/sprites}}

@@ -6,6 +6,7 @@ const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 const runSequence = require('gulp4-run-sequence');
 const del = require('del');
@@ -15,9 +16,6 @@ const browserSync = require('browser-sync').create();
 const prettyHtml = require('gulp-pretty-html');
 const spriteSmith = require('gulp.spritesmith');
 const merge = require('merge-stream');
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const webpackConfig = require('./webpack.config.js');
 
 const path = {
   // 작업경로
@@ -70,17 +68,30 @@ const Template = () => {
 
 /**
  * ==============================+
- * webpack(환경설정)
+ * JS Config(환경설정)
  * ==============================+
  */
-const webpackBuild = () => {
-  return (
-    src(`${path.assets.js}common.js`)
-      .pipe(webpackStream(webpackConfig), webpack)
-      //.pipe(uglify())
-      .pipe(dest(destPath.assets.js))
-      .pipe(browserSync.reload({ stream: true }))
-  );
+const Js_library = () => {
+  // 라이브러리 묶음
+  return src(`${path.assets.js}lib/*.js`, { sourcemaps: true })
+    .pipe(concat('lib.js'))
+    .pipe(uglify())
+    .pipe(dest(destPath.assets.js), { sourcemaps: true })
+    .pipe(browserSync.reload({ stream: true }));
+};
+
+const Js_common = () => {
+  // 작업용 JS 묶음
+  return src([`${path.assets.js}global.js`, `${path.assets.js}common.js`, `${path.assets.js}cookie.js`])
+    .pipe(concat('common.js'))
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      })
+    )
+    .pipe(uglify())
+    .pipe(dest(destPath.assets.js))
+    .pipe(browserSync.reload({ stream: true }));
 };
 
 /**
@@ -104,7 +115,7 @@ const Webfont = () => {
 };
 
 const Watch = () => {
-  watch(`${path.assets.js}*.js`, webpackBuild);
+  watch(`${path.assets.js}*.js`, Js_common);
   watch(`${path.assets.icon}**/*`, Sprite);
   watch(`${path.assets.images}**/*`, Images);
   watch(`${path.assets.scss}*.scss`, Sass_compile);
@@ -135,6 +146,7 @@ const browserSyncInit = () => {
 const Css = () => {
   // css 배포 경로로 복사
   return src(`${path.assets.css}**/*`)
+    .pipe(concat('ui.css'))
     .pipe(dest(destPath.assets.css))
     .pipe(browserSync.reload({ stream: true }));
 };
@@ -163,7 +175,7 @@ const Sass_compile = () => {
 const Sprite = () => {
   const spriteData = src(`${path.assets.icon}**/*.png`).pipe(
     spriteSmith({
-      imgName: 'img-sprite.png',
+      imgName: 'icon_sprite.png',
       padding: 5,
       cssName: '_icon.scss',
       cssTemplate: './src/assets/handlebarsInheritance.scss.handlebars',
@@ -175,5 +187,5 @@ const Sprite = () => {
   return merge(imgStream, cssStream);
 };
 
-exports.prod = series(Clean, webpackBuild, Sprite, Sass_compile, Css, Images, Webfont, Template);
+exports.prod = series(Clean, Js_library, Js_common, Sprite, Sass_compile, Css, Images, Webfont, Template);
 exports.watch = parallel(Watch, browserSyncInit);

@@ -212,6 +212,8 @@ main {
       .symbol {
         width: 86px;
         height: 86px;
+        flex-grow:0;
+        flex-shrink: 0;
         border-radius: 50%;
         background-color: $white;
       }

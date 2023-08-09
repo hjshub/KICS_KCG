@@ -232,6 +232,8 @@ main {
       .symbol {
         width: 74px;
         height: 74px;
+        flex-grow:0;
+        flex-shrink: 0;
         border-radius: 50%;
         background-color: $white;
         box-shadow: 1px 1px 7px 3px rgba($blue3, 40%);

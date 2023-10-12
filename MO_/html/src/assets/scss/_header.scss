@@ -5,9 +5,10 @@
  */
 
 .page-nav {
+  position: relative;
   width: 100%;
   min-width: 320px;
-  z-index: 999;
+  z-index: 10;
   background-color: $white;
   @include transition(0.3s all ease-out);
 
